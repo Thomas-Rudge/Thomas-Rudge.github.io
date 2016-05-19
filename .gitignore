@@ -1,7 +1,5 @@
-# Image files
-*.png
+# Photoshop files
 *.psd
-*.jpg
 
 # Windows image file caches
 Thumbs.db
