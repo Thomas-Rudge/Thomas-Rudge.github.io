@@ -1,0 +1,242 @@
+<!doctype html>
+
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Thomas Rudge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The resume of Thomas Rudge">
+  <meta name="author" content="Thomas Rudge">
+  <meta name="keywords" content="Thomas, Rudge, Edward, resume, cv, curriculum vitae, job">
+  <!-- CSS & JS -->
+  <link rel="stylesheet" href="../css/main.css">
+  <script type="text/javascript" src="../javascript/MT940_50.js" async></script>
+  <!-- Icons-->
+  <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../favicon/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../favicon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="../favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../favicon/manifest.json">
+  <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="../favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body id=bsoft>
+  <div id=container>
+    <div id=noscript>
+    Woops! You have Javascript disabled. Unfortunately this page is as useful as a chocolate teapot without it (but not as tasty).
+    </div>
+    <header>
+      <img class=myphoto src="..\images\me.png">
+      <div id=headerdiv>
+        <h1 class=myname>Thomas Rudge</h1>
+        <nav>
+	       <ul class=navlist>
+            <li class=navli><a href="..\index.html" title="Home">&#9978;</a></li>
+		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
+		      <li class=navli><a href="software.html" id=selected_page title="Personal software projects">Software &#9000;</a></li>
+		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
+		      <li class=navli><a href="photography.html" title="Photographs">Photography &#128247;</a></li>
+		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
+	       </ul>
+        </nav>
+      </div>
+      <ul id=socialbar>
+          <li>
+            <a href="https://in.linkedin.com/in/thomasrudge" title="Connect on Linkedin" target="_blank">
+              <img class=socialimg src="..\images\linkedin_logo.png" alt="Linkedin">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/nepos.software/" title="Nepos on Facebook" target="_blank">
+              <img class=socialimg src="..\images\facebook_logo.png" alt="Facebook">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Thomas-Rudge" title="Connect on GitHub" target="_blank">
+              <img class=socialimg src="..\images\git_logo.png" alt="GitHub">
+            </a>
+          </li>
+        </ul>
+    </header>
+    <br>
+    <div id=mtbanner class=gen_div>
+      <img id=small_mt_pic src="..\images\mt_logo_small.png" alt="MT Logo xs" height=75 width=75>
+    </div>
+    <div class=gen_div>
+      <p class='gen_text med_text margin0'>
+        <span class=gen_title>Online MT940/950 Generator</span><br>
+        This is an online swift MT940/950 generator. The header for the csv input file can be found 
+        <a class=normal_link href='../other/input_file.txt' target='_blank'>here</a> 
+        and the field definitions can be found 
+        <a class=normal_link href="https://raw.githubusercontent.com/Thomas-Rudge/MT940_50_GEN/master/README.md" title="GitHub MT94050 ReadMe" target="_blank">here</a>
+        . You can paste your own data into the first box, or use the default test data for a demonstration.
+        <br><br>
+        For more info see the bottom of the page.
+      </p>
+    </div><!-- SWIFT CONSOLE-->
+    <br>
+    <div class=gen_div>
+      <button onclick="startSwiftScript()" id=swift_button>Convert</button>
+      <select name=genops style="margin: 0px 2px 5px 2px;">
+        <option value='Auto'>Auto</option>
+        <option value='MT950'>MT950</option>
+        <option value='MT940'>MT940</option>
+      </select>
+      <a onclick="toggleOptions()" class=small_link id=options_button>  &#9776; more options  </a>
+    </div>
+    <div id=swift_options class=gen_div><!-- EXTRA OPTIONS-->
+      <!-- ROW 1 -->
+      <p class='gen_text med_text form_text inline_item'>Date Format:</p>
+      <select name=genops>
+        <option value='YYYYMMDD'>YYYYMMDD</option>
+        <option value='DDMMYYYY'>DDMMYYYY</option>
+        <option value='MMDDYYYY'>MMDDYYYY</option>
+      </select>
+      <br>
+      <p class='gen_text med_text form_text inline_item swift_block_title'>
+      {1: Basic Header Block ---------------------------------
+      </p>
+      <br>
+      <p class='gen_text med_text form_text inline_item'>App ID:</p>
+      <select name=genops>
+        <option value='A'>A - General Purpose Application</option>
+        <option value='F'>F - Financial Application</option>
+        <option value='L'>L - Logins</option>
+      </select>
+      <p class='gen_text med_text form_text inline_item'>Service ID:</p>
+      <select name=genops>
+        <option value='01'>01 - FIN/GPA</option>
+        <option value='21'>21 - ACK/NAK</option>
+      </select><br>
+      <!-- ROW 2 -->
+      <p class='gen_text med_text form_text inline_item'>Session#:</p>
+      <input type="text" name=genops value="0000">
+      <p class='gen_text med_text form_text inline_item'>Sequence#:</p>
+      <input type="text" name=genops value="000000">
+      <br>
+      <p class='gen_text med_text form_text inline_item swift_block_title'>
+      {2: Application Header Block ---------------------------
+      </p>
+      <br>
+      <p class='gen_text med_text form_text inline_item'>Direction:</p>
+      <select name=genops id=swift_direction onchange='directionOptions()'>
+        <option value='I'>I - Inward</option>
+        <option value='O'>O - Outward</option>
+      </select>
+      <p class='gen_text med_text form_text inline_item'>Priority:</p>
+      <select name=genops>
+        <option value='N'>N - Normal</option>
+        <option value='S'>S - System</option>
+        <option value='U'>U - Urgent</option>
+      </select>
+      <br>
+      <!-- ROW 3 -->
+      <p class='gen_text med_text form_text inline_item'>Obsolescence:</p>
+      <select name=genops id=in0>
+        <option value='0'>None</option>
+        <option value='020'>020 - 100 Minutes</option>
+        <option value='003'>003 - 15 Minutes</option>
+      </select>
+      <p class='gen_text med_text form_text inline_item'>Delivery Monitoring:</p>
+      <select name=genops id=in1>
+        <option value='0'>None</option>
+        <option value='1'>1 - Non Delivery Warning</option>
+        <option value='2'>2 - Delivery Notification</option>
+        <option value='3'>3 - Both (1 & 2)</option>
+      </select>
+      <br>
+      <!-- ROW 4 -->
+      <p class='gen_text med_text form_text inline_item'>Input Time#:</p>
+      <input type="text" name=genops id=out1 value="0000">
+      <p class='gen_text med_text form_text inline_item'>Output Time#:</p>
+      <input type="text" name=genops id=out2 value="1200">
+      <br>
+      <!-- ROW 5 -->
+      <p class='gen_text med_text form_text inline_item'>Output Date#:</p>
+      <input type="text" name=genops id=out3 value="010101">
+      <p class='gen_text med_text form_text inline_item'>Msg Input Ref#:</p>
+      <input type="text" name=genops value="">
+      <br>
+      <!-- ROW 6 -->
+      <p class='gen_text med_text form_text inline_item swift_block_title'>
+      {3: User Header Block ----------------------------------
+      </p>
+      <br>
+      <p class='gen_text med_text form_text inline_item'>Msg User Ref#:</p>
+      <input type="text" name=genops id=out0 value="MT940950GEN"><br>
+      <p class='gen_text med_text form_text inline_item'>Priority Code#:</p>
+      <input type="text" name=genops value="">
+      <br>
+      <p class='gen_text med_text form_text inline_item swift_block_title'>
+      {5: Trailer Block --------------------------------------
+      </p>
+      <br>
+      <p class='gen_text med_text form_text inline_item'>Checksum#:</p>
+      <input type="text" name=genops value=""><br>
+    </div>
+    <!-- SWIFT BOXES-->
+    <div id=swiftboxes>
+      <!-- The first text area contains sample input -->
+      <textarea id=swift_input rows="25" cols="65" wrap="off">
+Sender BIC,Receiver BIC,Account ID,Stmt No,Stmt Pg,OpBalSign,OpBalType,OpBalDate,Opening Balance,Value Date,Entry Date,D/C,Amount,Trancode,Ref1,Ref2,Ref3,ClBalSign,ClBalType,ClBalDate,Closing Balance,AvBalSign,AvBalDate,Closing Available Balance,CCY,Ref4 (MT940 Only),TRN
+TEST12A,BANK33GB,000012345,1,1,C,F,2015-10-14,0,2015-10-15,2015-10-15,C,100,S202,Luvly,Spam,,C,M,2015-10-15,99.45,,,,EUR,,
+TEST12A,BANK33GB,000012345,1,1,C,F,2015-10-14,0,2015-10-14,2015-10-15,D,0.55,NMSC,What have the,,Romans ever done for us?,C,M,2015-10-15,99.45,,,,EUR,You can put quite a long reference here if you wish. 123456789,
+TEST12A,BANK13GB,000012345,1,2,C,M,2015-10-14,99.45,2015-10-15,2015-10-15,RC,1618033989,S101,89Cut down the ,mightiest tree ,WITH A H3RR1NG!!1!1!,D,F,2015-10-15,1618033889,C,2015-10-15,4238.05,EUR,,
+TEST12A,PIGGY123,ABC00067,1,1,C,F,2015-11-05,5521.33,2007-10-02,2015-11-04,RD,3200,DRFT,AHH SHH,TEST IT,TA TEST IT REAL GOOD,C,F,2015-11-05,3112.54,,,,USD,,
+TEST12A,PIGGY123,ABC00067,1,1,C,F,2015-11-05,5521.33,2015-11-03,2015-11-04,C,2.32,STRF,,,,C,F,2015-11-05,3112.54,,,,USD,,
+TEST12A,PIGGY123,ABC00067,1,1,C,F,2015-11-05,5521.33,2015-11-05,2015-11-05,D,5611.11,NCHG,,66332707721194,          TEN SPACES,C,F,2015-11-05,3112.54,,,,USD,0012993826188276493882993884322,
+TEST12A,PIGGY123,ABC00070,1,1,C,F,2015-11-09,9288176.01,2015-11-09,2015-11-10,D,-9000000.01,S123,,,0000 That’s a lot of money,D,M,2015-11-09,11824,,,,GBP,PPPPPPPPPP    989289899++== S101!!!,KNIGHTSOFNEE1234
+TEST12A,PIGGY123,ABC00070,1,1,C,F,2015-11-09,9288176.01,2015-11-09,2015-11-10,D,-300000,S000,SPAM SPAM SPAM,,,D,M,2015-11-09,11824,,,,GBP,"98008777 REF1678803999 ADRS 789 Python Avenue, Spamtown Ph:555-123-9876",
+TEST12A,PIGGY123,ABC00070,1,2,D,M,2015-11-10,11824,2015-11-10,2015-11-10,C,1,S00S,000122222,93884893,123123125444,D,F,2015-11-10,11789.67,,,,GBP,,
+TEST12A,PIGGY123,ABC00070,1,2,D,M,2015-11-10,11824,2015-11-10,2015-11-10,C,33.33,S  T,X,CHEESY DIBBLES,,D,F,2015-11-10,11789.67,D,2015-11-10,1789.67,GBP,The last item to go. Goodbye everyone.,
+      </textarea>
+      <textarea id=swift_output rows="25" cols="65" wrap="off">Results will be shown here.
+      </textarea>
+    </div>
+    <div>
+    <p class='gen_text med_text margin0'>
+    I originally wrote this conversion script in Python and packaged it in a GUI for a company in Germany. However the version running on this page is 
+    written in Javascript, so the conversion takes place in your browser and not on a hidden server somewhere. You can see both versions of the script on this 
+    <a class=normal_link href="https://github.com/Thomas-Rudge/MT940_50_GEN" title="GitHub MT940/50 Generator" target="_blank">GitHub page</a>
+    , or you can view the pages source files.
+    <br><br>
+    The input csv data must comply with RFC-4180 standards, with the only exception being that the generator cannot handle new-line characters 
+    within cell values (though swift doesn't allow this in reference fields anyway). You can select the output message type using the drop-down 
+    option. If left on auto the script will only produce an MT940 if it finds at least one record with a field 86 (Ref 4) populated. The advanced 
+    options give you more control over the output. By default the program expects dates in the input data to be in ISO8601 format (YYYYMMDD), and 
+    the desired output to be basic normal priority inward (to swift) messages. No validation is performed on either the input, or output, and final 
+    responsibility for ensuring the outputs completeness and compatibility lies with you.
+    </p>
+    <p class='gen_text small_text margin0'>
+    You can read more about the swift message block structure, including headers, in 
+    <a class=normal_link href="http://www.ibm.com/support/knowledgecenter/SSBTEG_4.3.0/com.ibm.wbia_adapters.doc/doc/swift/swift72.htm%23HDRI1023624" target="_blank">IBM's knowledge center</a>
+    and on <a class=normal_link href="http://www.sepaforcorporates.com/swift-for-corporates/read-swift-message-structure/" target="_blank">Sepa's corporate website.</a> 
+    You can read more about MT940 and MT950 messages in <a class=normal_link href="https://www2.swift.com/uhbonline/books/public/en_uk/us9m_20150724/index.htm" target="_blank">Swift's User Handbook.</a> 
+    It's all riveting stuff.
+    </p>
+    </div>
+    <br>
+    <hr>
+    <footer class=relative_footer>
+    &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by copyright.<br>
+    Site not working properly? &#128534; <a class=normal_link href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+Assumptions;
+> A csv cell that contains a delimeter character will preceed and end with double quotes.
+> A csv cell that contains a double quote character will have that character escaped by another double quote.
+> Therefore the number of double quotes between two cell delimeters will either be zero or even, and in all other cases be odd.
+
+Variables to track;
+c 	  = the current characters
+cellValue = the current cell value as a string
+dq 	  = The number of double quotes currently counted in the current section (integer)
+cells 	  = The computed cell values (array)
+lines     = The list of line cells
+
+
+For line in lines:
+   For var c in line:
+      if the character is a double quote
+         dq += 1
+         continue
+      if the character is a comma
+         if dq is even or 0:
+            cells.push(cellValue.replace('""', '"'))
+            cellValue = ''
+            dq = 0
+            continue
+      cellValue += c
+   lines.push(cells)
+   cells = []
+   
