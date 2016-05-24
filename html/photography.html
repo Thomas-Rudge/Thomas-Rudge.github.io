@@ -8,8 +8,10 @@
   <meta name="description" content="The resume of Thomas Rudge">
   <meta name="author" content="Thomas Rudge">
   <meta name="keywords" content="Thomas, Rudge, Edward, resume, cv, curriculum vitae, job">
-  <!-- Icons-->
+  <!-- CSS & JS -->
   <link rel="stylesheet" href="../css/main.css">
+  <script type="text/javascript" src="../javascript/slides.js"></script>
+  <!-- Icons-->
   <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-touch-icon-72x72.png">
@@ -46,7 +48,7 @@
 		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
 		      <li class=navli><a href="software.html" title="Personal software projects">Software &#9000;</a></li>
 		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="" id=selected_page title="Photographs">Photography &#128247;</a></li>
+		      <li class=navli><a id=selected_page title="Photographs">Photography &#128247;</a></li>
 		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
 	       </ul>
         </nav>
@@ -70,11 +72,87 @@
         </ul>
     </header>
     <div class=gen_div>
-      <p class='gen_text med_text'>
-        <span class=gen_title>MT940/950 Generator</span><br>
-        This tool will generate Swift MT940 and MT950 cash statements from a specific csv format.
-      </p>
+      <img id=PHOTO src="..\images\photography\main1.png" alt="Photography Banner">
     </div>
+    <br>
+    <div id=noscript>
+    Now witness the firepower of this fully armed and operational webpage...
+    ...but first you'll need to enable Javascript.
+    </div>
+    <br>
+    <div class=rowcontainer>  
+      <div id=dimg01 class=design_div>
+        <img src="..\images\design\GSLL1.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg01')">
+        <p class='gen_text small_text invert_text'>The cover page of a brochure create for Gunpati Stock Ltd.</p>
+      </div>
+      <div id=dimg02 class=design_div>
+        <img src="..\images\design\GSLL2.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg02')">
+        <p class='gen_text small_text invert_text'>The inner page of a brochure create for Gunpati Stock Ltd.</p>
+      </div>
+      <div id=dimg03 class=design_div>
+        <img src="..\images\design\GSLR.png" alt="GSL" title='GSL Annual Report' onclick="expandImageView('dimg03')">
+        <p class='gen_text small_text invert_text'>The cover page Gunpati Stock Ltd's Annual Report.</p>
+      </div>
+    </div>
+    <br>
+    <div class=rowcontainer>
+      <div id=dimg04 class=design_div>
+        <img src="..\images\design\obsidian_dir.png" alt="Obsidian" title='Obsidian Business Directory' onclick="expandImageView('dimg04')">
+        <p class='gen_text small_text invert_text'>The cover page for a directory of local businesses,<br>created for the Obsidian Business Interface.</p>
+      </div>
+      <div id=dimg05 class=design_div>
+        <img src="..\images\design\obsidian_event.png" alt="Obsidian" title='Obsidian Event Report' onclick="expandImageView('dimg05')">
+        <p class='gen_text small_text invert_text'>Obsidian Business Interface event report cover page.</p>
+      </div>
+      <div id=dimg06 class=design_div>
+        <img src="..\images\design\EA1.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg06')">
+        <p class='gen_text small_text invert_text'>The cover page of an info-pack created for<br>Entrepreneurs Associates micro finance company.</p>
+      </div>
+      <div id=dimg07 class=design_div>
+        <img src="..\images\design\EA2.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg07')">
+        <p class='gen_text small_text invert_text'>An inner page of the EA info-pack.</p>
+      </div>
+      <div id=dimg08 class=design_div>
+        <img src="..\images\design\EA3.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg08')">
+        <p class='gen_text small_text invert_text'>An inner page of the EA info-pack.</p>
+      </div>
+    </div>
+    <br>
+    <div class=rowcontainer>
+      <div id=dimg09 class=design_div>
+        <img src="..\images\design\nepos.png" alt="Nepos" title='Nepos Logo' onclick="expandImageView('dimg09')">
+        <p class='gen_text small_text invert_text'>The logo of the Nepos cash management software.</p>
+      </div>
+      <div id=dimg10 class=design_div>
+        <img src="..\images\design\nepos_splash.png" alt="Nepos" title='Nepos Splash Screen' onclick="expandImageView('dimg10')">
+        <p class='gen_text small_text invert_text'>The splash screen of the Nepos cash management software.</p>
+      </div>
+    </div>
+    <br>
+    <div class=rowcontainer>
+      <div id=dimg11 class=design_div>
+        <img src="..\images\design\4katalyst1.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg11')">
+        <p class='gen_text small_text invert_text'>The cover page of the Katalyst magazine, 4th edition.</p>
+      </div>
+      <div id=dimg12 class=design_div>
+        <img src="..\images\design\4katalyst2.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg12')">
+        <p class='gen_text small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
+      </div>
+      <div id=dimg13 class=design_div>
+        <img src="..\images\design\4katalyst3.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg13')">
+        <p class='gen_text small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
+      </div>
+      <div id=dimg14 class=design_div>
+        <img src="..\images\design\4katalyst4.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg14')">
+        <p class='gen_text small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
+      </div>
+    </div>
+    <div id=blackdiv>
+    <a id=arrow_left  class=arrow onclick='imageToggle(-1)'>&#10096;</a>
+    <a id=arrow_right class=arrow onclick='imageToggle(1)'>&#10097;</a>
+    </div>
+    <br>
+    <hr>
     <footer class=relative_footer>
     &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by copyright.<br>
     Site not working properly? &#128534; <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>

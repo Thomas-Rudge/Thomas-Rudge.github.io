@@ -10,7 +10,7 @@
     url('../fonts/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
   font-weight: normal;
   font-style: normal;
-  }
+}
 
 @font-face {
   font-family: 'questrialregular';
@@ -22,61 +22,46 @@
     url('../fonts/questrial-regular-webfont.svg#questrialregular') format('svg');
   font-weight: normal;
   font-style: normal;
-  }
+}
   
 /*Responsive design bit*/
 @media screen and (max-width: 1132px) {
   footer {
     margin-left: 20px !important;
     text-align: left !important;
-    }
+  }
   header {
     width: 100% !important;
-    }
+  }
   .'gen_text med_text'{
     padding: 10px 10px 10px 10px !important;
-    }    
+  }    
   .margin70 {
     margin: 15px 0px 0px 20px !important;
-    }
+  }
   .margin40 {
     margin: 15px 20px 0px 20px !important;
-    }    
+  }    
   .design_image {
     max-height: 200px !important;
     max-width: 300px !important;
-    }
-  #design_div3 img {
-    max-height: 80px !important;
-    }
-  #design_div1 {
-    padding-left: calc((100% - 750px) / 2) !important;
-    }
-  #design_div2 {
-    padding-left: calc((100% - 820px) / 2) !important;
-    }  
-  #design_div3 {
-    padding-left: calc((100% - 520px) / 2) !important;
-    }  
-  #design_div4 {
-    padding-left: calc((100% - 1016px) / 2) !important;
-    }
+  }
   #socialbar{
     right: 30px !important;
-    }
+  }
   #container {
     width: 100% !important;
     display: inline-table !important;
-    }
+  }
   #mtbanner {
     width: auto !important;
     display: block !important;
-    }
+  }
   .design_div {
     padding: 3px !important;
     margin: 2px !important;    
-    }
   }
+}
   
 @media screen and (max-width: 1025px) {
   .myname {
@@ -84,49 +69,64 @@
     line-height: 20px !important;
     letter-spacing: -2px !important;
     margin-top: 30px !important;
-    }
+  }
   nav a {
     margin: 0px 0px 0px 0px !important;
-    }
+  }
   header {
     height: auto !important;
-    }
+  }
   footer {
     position: relative !important;
-    }
+  }
   #headerdiv {
     display: block !important;
     box-sizing: border-box !important;
-    }
+  }
   #socialbar{
     display: inline-flex !important;
-    }
+  }
   .socialimg{
     margin: 2px !important;
-    }
+  }
   .design_div {
     padding: 2px !important;
     margin: 1px !important;    
-    }
   }
+}
   
 @media screen and (max-width: 904px) {
   #headerdiv {
     margin-bottom: 0px !important;
-    }
   }
+  #DESIGN {
+    text-align: left !important;
+    display: none !important;
+  }
+  #PHOTO {
+    text-align: left !important;
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .rowcontainer {
+    flex-wrap: wrap !important;
+  }
+}
+
 
 @media screen and (max-width: 520px) {
   #headerdiv {
     position: static !important;
-    }
+  }
   .myphoto {
     margin: 15px 0px 0px 30px !important;
-    }
+  }
   .gen_div {
     display: block !important;
-    }
   }
+}
   
 /*Main CSS*/
 #noscript {
@@ -140,37 +140,37 @@
   font-size: 14px;
   background-color: #fff568;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  }
+}
 
 html {
   height: 100%;
   width: 100%;
-  }
+}
   
 header {
   height: 169px;
   width: 1130px;
   background-color: white;
   top: 0;
-  }
+}
 
 body {
   background-repeat: repeat;
   background-color: #b6b6b6;
   display: block;
   margin: 0px 0px 0px 0px;
-  }
+}
   
 hr {
   border: 0;
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
-  }
+}
 
 a {
   cursor: pointer;
-  }
+}
    
 h1 {
   font-family: 'droid sansbold', Futura, sans-serif;
@@ -182,7 +182,7 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  }
+}
 
 footer {
   position: relative;
@@ -194,13 +194,13 @@ footer {
   text-align: center;
   color: gray;
   font-size: 12px;
-  }
+}
    
 nav {
   display: block;
   margin: 5px 0px 0px 0px;
   background-color: transparent;
-  }
+}
 
 nav a {
   font-family: questrialregular, arial, "sans-serif";
@@ -222,7 +222,7 @@ nav a {
   color: #404040;
   transition: background-color 0.3s;
   -webkit-transition: background-color 0.3s;
-  }
+}
 
 nav a:hover {
   cursor: pointer;
@@ -231,11 +231,11 @@ nav a:hover {
   transition: background-color 0.3s;
   -webkit-transition: background-color 0.3s;
   content: &#9874;
-  }
+}
    
 .navli {
   display: inline-block;
-  }
+}
 	
 .navlist {
   list-style: none;
@@ -245,54 +245,53 @@ nav a:hover {
   padding: 0px 0px 0px 0px;
   border-top: solid 1px;
   border-color: #404040;
-  }
+}
  
 .socialimg {
   height: 20px;
   width: 20px;
   border: 0px;
-  }
+}
    
 .myname {
   font-size: 60px;
-  /*font-weight: 600;*/
   letter-spacing: -4px;
   line-height: 40px;
   padding: 15px 0px 15px 0px;
   margin: 0px 0px 0px 20px;
-  }
+}
 
 .myphoto {
   width: 150px;
   height: 150px;
   margin: 15px 0px 0px 30px;
   float: left;
-  }
+}
 
 .genphoto {
   border: none;
-  }
+}
 
 .centred {
   width: 100%;
   text-align: center;
-  }
+}
   
 .margin0 {
   margin: 0px 0px 0px 0px;
-  }
+}
   
 .margin70 {
   margin: 15px 0px 0px 70px;
-  }
+}
   
 .margin40 {
   margin: 15px 40px 0px 40px;
-  }
+}
   
 .margin30 {
   margin: 15px 30px 0px 30px;
-  }
+}
   
 .gen_text {
   font-family: questrialregular, arial, "sans-serif";
@@ -304,43 +303,43 @@ nav a:hover {
   display: block;
   box-sizing: border-box;
   left: 0;
-  }
+}
   
 .med_text {
   font-size: 17px;
   line-height: 1.3;
-  }
+}
   
 .small_text {
   font-size: 14px;
   line-height: 1.3;
-  }
+}
   
 .invert_text {
   color: white;
   background-color: #262626;
-  }
+}
   
 .form_text {
   font-size: 15px;
   padding: 6px 2px 6px 15px;
   margin: 0px 0px 0px 0px;
-  }
+}
 
 .inline_item {
   display: inline-block;
-  }
+}
   
 .red_link {
   text-decoration: none;
   font-weight: bold;
   color: #CC0000;
-  }
+}
   
 .normal_link {
   text-decoration: none;
   color: #004f7d;
-  }
+}
   
 .small_link {
   font-family: questrialregular, arial, "sans-serif";
@@ -353,14 +352,14 @@ nav a:hover {
   padding: 0px 2px 0px 2px;
   box-sizing: border-box;
   background: transparent;
-  }
+}
  
- .swift_block_title {
-   color: #CC0000;
-   font-style: bold;
-   }
+.swift_block_title {
+  color: #CC0000;
+  font-style: bold;
+}
    
- .gen_title {
+.gen_title {
   font-family: questrialregular, arial, "sans-serif";
   font-size: 21px;
   font-weight: bold;
@@ -370,48 +369,52 @@ nav a:hover {
   display: block;
   box-sizing: border-box;
   left: 0;
-  }
+}
 
 .full_width {
   width: 1130px;
-  }
+}
   
 .gen_div {
   background-color: white;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   display: inline-flex;
-  }
+}
  
 .design_div {
-  padding: 5px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  background-color: #ebebeb;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
   display: inherit;
-  position: initial;
-  border: 1px;
-  border-style: solid;
-  border-color: #bfbfbf;
+  border-style: none;
   transition: 0.1s 0.5s opacity ease;
   webkit-transition: 0.1s 0.5s opacity ease;
-  }
+}
   
 .design_div img {
+  padding: 8px;
   position: initial;
-  max-height: 230px;
-  max-width: 326px;  
-  }
+  border: 1px;
+  border-color: #bfbfbf;
+  border-style: solid;
+  background-color: #ebebeb;
+  height: 75%;
+  width: 75%;  
+}
 
 .design_div p {
   display: none;
   padding: 5px 5px 10px 5px;
   opacity: 0;
-  }
+}
 
 .design_div:hover {
   border-color: #004f7d;
   cursor: pointer;
-  }
+}
   
 .active_design_div {
   display: block;
@@ -427,12 +430,12 @@ nav a:hover {
   webkit-transition: 0.1s 0.5s opacity ease;
   opacity: 0;
   visibility: hidden;
-  }
+}
 
 .active_design_div img {
   max-height: none !important;
   max-width: none !important;
-  }
+}
   
 .active_design_div p {
   display: block;
@@ -443,11 +446,38 @@ nav a:hover {
   box-sizing: border-box;
   margin: 0px;
   opacity: 1;
-  }
+}
+  
+.arrow {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #D3D1C6;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  background: transparent;
+  z-index: 3;
+}
+
+.rowcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.img_div {
+  margin: auto;
+  display: flex;
+}
 
 #empty {
   /*Don't put anything here*/
-  }
+}
   
 #socialbar{
   list-style: none;
@@ -459,31 +489,31 @@ nav a:hover {
   margin: 0pc 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   display: block;
-  }
+}
 
 #selected_page {
   background-color: #4e6df0;
-  }
+}
 
 #selected_page:hover {
   background-color: black;
-  }
+}
   
 #small_mt_pic {
   margin: 0px 0px 0px 40px;
   padding: 0px 0px 0px 0px;
   border: none;
-  }
+}
 
 #mtbanner {
   background-color: #CC0000;
   width: 1130px;
   margin: 20px 0px 20px 0px;
-  }
+}
 
 #swiftboxes {
   margin: 0px 0px 0px 30px;
-  }
+}
 
 #container {
   width: 1130px;
@@ -492,32 +522,32 @@ nav a:hover {
   background-color: white;
   box-shadow: 1px 0px 40px #262626;
   display: block;
-  }
+}
   
 #headerdiv {
   display: inline-block;
   margin-top: 30px;
   margin-bottom: 50px;
-  }
+}
   
 #swift_input {
   color: black;
   background-color: #FFA09B;
-  }
+}
   
 #swift_output {
   color: black;
   background-color: #FFA09B;
-  }
+}
   
 #swift_button {
   margin: 0px 2px 5px 30px;
-  }
+}
 
 #swift_options {
   display: none;
   margin: 0px 0px 10px 30px;
-  }
+}
   
 #DESIGN {
   opacity: 1;
@@ -525,9 +555,21 @@ nav a:hover {
   position: inherit;
   height: auto;
   width: 100%;
-  transition: 0.5s opacity linear;
-  webkit-transition: 0.5s opacity linear;
-  }
+  text-align: right;
+  transition: 0.2s opacity linear;
+  webkit-transition: 0.2s opacity linear;
+}
+  
+#PHOTO {
+  opacity: 1;
+  display: block;
+  position: inherit;
+  height: auto;
+  width: 100%;
+  text-align: right;
+  transition: 0.2s opacity linear;
+  webkit-transition: 0.2s opacity linear;
+}
 
 #blackdiv {
   background-color: black;
@@ -542,49 +584,39 @@ nav a:hover {
   display: none;
   visibility: hidden;
   z-index: 1;
-  }
-/* Design page centre image divs*/
-#design_div1 {
-  padding-left: calc((100% - 854px) / 2);
-  }
+}
   
-#design_div2 {
-  padding-left: calc((100% - 926px) / 2);
-  }
-  
-#design_div3 {
-  padding-left: calc((100% - 640px) / 2);
-  }
-  
-#design_div3 img {
-  height: auto;
-  max-height: 100px;
-  }
-  
-#design_div4 {
-  padding-left: calc((100% - 1064px) / 2);
-  }
+#arrow_left {
+  left: 30px;
+  top: 50%;
+}
+
+#arrow_right {
+  right: 30px;
+  top: 50%;
+}
   
 /* Body background images*/
 #bhome {
   background-image: url("../images/bgtile.png");
-  }
+}
 
 #bprof {
   background-image: url("../images/protile.png");
-  }
+}
+
 #bsoft {
   background-image: url("../images/softile.png");
-  }
+}
   
 #bdesign {
   background-image: url("../images/destile.png");
-  }
+}
   
 #bphoto {
   background-image: url("../images/photile.png");
-  }
+}
   
 #bcont {
   background-image: url("../images/contile.png");
-  }
+}

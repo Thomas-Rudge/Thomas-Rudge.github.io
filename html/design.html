@@ -47,8 +47,8 @@
             <li class=navli><a href="..\index.html" title="Home">&#9978;</a></li>
 		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
 		      <li class=navli><a href="software.html" title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a href="" id=selected_page title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="photography.html" title="Photographs">Photography &#128247;</a></li>
+		      <li class=navli><a id=selected_page title="Design work">Design &#128393;</a></li>
+		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography &#128247;</a></li>
 		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
 	       </ul>
         </nav>
@@ -79,7 +79,7 @@
     "A webpage by any other name looks just as sweet.... except when you have javascript disabled." - William Shakespeare
     </div>
     <br>
-    <div class=gen_div id=design_div1>
+    <div class=rowcontainer>  
       <div id=dimg01 class=design_div>
         <img src="..\images\design\GSLL1.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg01')">
         <p class='gen_text small_text invert_text'>The cover page of a brochure create for Gunpati Stock Ltd.</p>
@@ -94,7 +94,7 @@
       </div>
     </div>
     <br>
-    <div class=gen_div id=design_div2>
+    <div class=rowcontainer>
       <div id=dimg04 class=design_div>
         <img src="..\images\design\obsidian_dir.png" alt="Obsidian" title='Obsidian Business Directory' onclick="expandImageView('dimg04')">
         <p class='gen_text small_text invert_text'>The cover page for a directory of local businesses,<br>created for the Obsidian Business Interface.</p>
@@ -117,7 +117,7 @@
       </div>
     </div>
     <br>
-    <div class=gen_div id=design_div3>
+    <div class=rowcontainer>
       <div id=dimg09 class=design_div>
         <img src="..\images\design\nepos.png" alt="Nepos" title='Nepos Logo' onclick="expandImageView('dimg09')">
         <p class='gen_text small_text invert_text'>The logo of the Nepos cash management software.</p>
@@ -128,7 +128,7 @@
       </div>
     </div>
     <br>
-    <div class=gen_div id=design_div4>
+    <div class=rowcontainer>
       <div id=dimg11 class=design_div>
         <img src="..\images\design\4katalyst1.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg11')">
         <p class='gen_text small_text invert_text'>The cover page of the Katalyst magazine, 4th edition.</p>
@@ -147,6 +147,8 @@
       </div>
     </div>
     <div id=blackdiv>
+    <a id=arrow_left  class=arrow onclick='imageToggle(-1)'>&#10096;</a>
+    <a id=arrow_right class=arrow onclick='imageToggle(1)'>&#10097;</a>
     </div>
     <br>
     <hr>
