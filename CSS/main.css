@@ -2,12 +2,13 @@
 
 /*Make custom fonts available*/
 @font-face {
-  font-family: 'droid sansbold';
-  src: url('../fonts/DroidSans-Bold-webfont.eot');
-  src: url('../fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/DroidSans-Bold-webfont.woff') format('woff'),
-    url('../fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
-    url('../fonts/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+  font-family: 'abeezeeregular';
+  src: url('../fonts/abeezee-regular-webfont.eot');
+  src: url('../fonts/abeezee-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abeezee-regular-webfont.woff2') format('woff2'),
+       url('../fonts/abeezee-regular-webfont.woff') format('woff'),
+       url('../fonts/abeezee-regular-webfont.ttf') format('truetype'),
+       url('../fonts/abeezee-regular-webfont.svg#abeezeeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,10 +17,10 @@
   font-family: 'questrialregular';
   src: url('../fonts/questrial-regular-webfont.eot');
   src: url('../fonts/questrial-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/questrial-regular-webfont.woff2') format('woff2'),
-    url('../fonts/questrial-regular-webfont.woff') format('woff'),
-    url('../fonts/questrial-regular-webfont.ttf') format('truetype'),
-    url('../fonts/questrial-regular-webfont.svg#questrialregular') format('svg');
+       url('../fonts/questrial-regular-webfont.woff2') format('woff2'),
+       url('../fonts/questrial-regular-webfont.woff') format('woff'),
+       url('../fonts/questrial-regular-webfont.ttf') format('truetype'),
+       url('../fonts/questrial-regular-webfont.svg#questrialregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,9 +34,12 @@
   header {
     width: 100% !important;
   }
-  .'gen_text med_text'{
+  .gen_text{
     padding: 10px 10px 10px 10px !important;
-  }    
+  }
+  .med_text{
+    padding: 10px 10px 10px 10px !important;
+  }
   .margin70 {
     margin: 15px 0px 0px 20px !important;
   }
@@ -61,11 +65,14 @@
     padding: 3px !important;
     margin: 2px !important;    
   }
+  #contact_div {
+    margin: 80px 0px 40px 0px !important;
+  }
 }
   
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1000px) {
   .myname {
-    font-size: 40px !important;
+    font-size: 60px !important;
     line-height: 20px !important;
     letter-spacing: -2px !important;
     margin-top: 30px !important;
@@ -93,6 +100,9 @@
     padding: 2px !important;
     margin: 1px !important;    
   }
+  #contact_div {
+    margin: 40px 0px 40px 0px !important;
+  }
 }
   
 @media screen and (max-width: 904px) {
@@ -106,6 +116,15 @@
   #PHOTO {
     text-align: left !important;
     display: none !important;
+  }
+  #index_footer {
+    position: relative !important;
+    display: inline-block !important;
+    bottom: 0 !important;
+    margin: 10px 50px 30px 50px !important;
+    margin-left: 20px !important;
+    text-align: left !important;
+    left: 0 !important;
   }
 }
 
@@ -125,6 +144,15 @@
   }
   .gen_div {
     display: block !important;
+  }
+  #contact_div {
+    display: block !important;
+  }
+  .myname {
+    font-size: 38px !important;
+    line-height: 20px !important;
+    letter-spacing: -2px !important;
+    margin-top: 30px !important;
   }
 }
   
@@ -164,8 +192,8 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  background: #333333;
+  background-image: linear-gradient(to right, #cccccc, #333333, #cccccc);
 }
 
 a {
@@ -173,7 +201,7 @@ a {
 }
    
 h1 {
-  font-family: 'droid sansbold', Futura, sans-serif;
+  font-family: abeezeeregular, Futura, sans-serif;
   text-align: center;
   display: inline-block;
   color: #004f7d;
@@ -195,7 +223,7 @@ footer {
   color: gray;
   font-size: 12px;
 }
-   
+  
 nav {
   display: block;
   margin: 5px 0px 0px 0px;
@@ -254,17 +282,17 @@ nav a:hover {
 }
    
 .myname {
-  font-size: 60px;
+  font-size: 80px;
   letter-spacing: -4px;
-  line-height: 40px;
+  line-height: 70px;
   padding: 15px 0px 15px 0px;
   margin: 0px 0px 0px 20px;
 }
 
 .myphoto {
-  width: 150px;
+  width: auto;
   height: 150px;
-  margin: 15px 0px 0px 30px;
+  margin: 15px 0px 0px 65px;
   float: left;
 }
 
@@ -272,9 +300,50 @@ nav a:hover {
   border: none;
 }
 
+.standard_table {
+  border-spacing: 0;
+  font-family: questrialregular, arial, "sans-serif";
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  line-height: 1.3;
+  font-size: 17px;
+  padding: 5px;
+}
+
+.standard_table, th {
+  border: 0px;
+  border-bottom: 1px solid #004f7d;
+  padding: 5px;
+}
+
+.standard_table, td {
+  border: 0px;
+  padding: 5px;
+}
+
+.standard_table tr:nth-child(even) {
+  background-color: #cbe4f2;
+  }
+
 .centred {
   width: 100%;
   text-align: center;
+}
+
+.centred_txt {
+  text-align: center;
+}
+
+.black {
+  background-color: #131313;
+  color: #efefef;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.fullwidth {
+  width: 100%;
 }
   
 .margin0 {
@@ -296,8 +365,6 @@ nav a:hover {
 .gen_text {
   font-family: questrialregular, arial, "sans-serif";
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  text-align: justify;
-  text-justify: distribute;
   line-height: 1.3;
   padding: 20px 30px 20px 30px;
   display: block;
@@ -314,7 +381,12 @@ nav a:hover {
   font-size: 14px;
   line-height: 1.3;
 }
-  
+
+.invert_hr {
+  background: #cccccc;
+  background-image: linear-gradient(to right, #333333, #cccccc, #333333);
+  }
+ 
 .invert_text {
   color: white;
   background-color: #262626;
@@ -382,21 +454,54 @@ nav a:hover {
   display: inline-flex;
 }
  
+.photo_div {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 30px;
+  display: block;
+  background-color: transparent;
+  transition: 0.1s 0.5s opacity ease;
+  webkit-transition: 0.1s 0.5s opacity ease;
+}
+
+.photo_div img {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #333333;
+}
+
+.photo_div p {
+  display: none;
+  padding: 5px 5px 10px 5px;
+  opacity: 0;
+}
+
+.photo_div:hover {
+  border-color: #004f7d;
+  cursor: pointer;
+}
+
 .design_div {
   padding: 0px;
   margin: 0px;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  display: inherit;
+  display: block;
   border-style: none;
   transition: 0.1s 0.5s opacity ease;
   webkit-transition: 0.1s 0.5s opacity ease;
 }
   
 .design_div img {
+  margin: 0px;
   padding: 8px;
-  position: initial;
+  position: relative;
+  right: -5%;
   border: 1px;
   border-color: #bfbfbf;
   border-style: solid;
@@ -470,6 +575,15 @@ nav a:hover {
   align-content: center;
 }
 
+.contact_link {
+  margin: 15px 0px 0px 75px;
+  text-decoration: none;
+  text-align: center;
+  color: #bfe8ff;
+  font-family: abeezeeregular, Arial, sans-serif;
+  font-size: 16px;
+}
+
 .img_div {
   margin: auto;
   display: flex;
@@ -477,6 +591,22 @@ nav a:hover {
 
 #empty {
   /*Don't put anything here*/
+}
+
+#index_footer {
+  display: block;
+  position: absolute;
+  margin-left: 0px;
+  left: calc((100% / 2) - 350px);
+  }
+  
+#home_symbol {
+  color: #004f7d;
+  }
+  
+#contact_div {
+  display: flex;
+  margin: 80px 0px 40px 0px;
 }
   
 #socialbar{
@@ -577,8 +707,6 @@ nav a:hover {
   width: 100%;
   height: 100%;
   top: 0px;
-  transition: 0.2s 0.5s opacity ease;
-  webkit-transition: 0.2s 0.5s opacity ease;
   opacity: 0;
   left: 0;
   display: none;
@@ -619,4 +747,116 @@ nav a:hover {
   
 #bcont {
   background-image: url("../images/contile.png");
+}
+
+/* Sprites */
+#linkedin, #facebook, #github, #emailme, #linkedin_dark, #facebook_dark, #github_dark, #emailme_dark {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#socialbar li, #socialbar a {
+  height: 20px;
+  display: block;
+  box-sizing: border-box;
+}
+
+#linkedin {
+  background: url("../images/sprites/small_icons.gif") 0px -21px;
+}
+
+#linkedin:hover {
+  background: url("../images/sprites/small_icons.gif") 21px -21px;
+}
+
+#facebook {
+  background: url("../images/sprites/small_icons.gif") 0px -42px;
+}
+
+#facebook:hover {
+  background: url("../images/sprites/small_icons.gif") 21px -42px;
+}
+
+#github {
+  background: url("../images/sprites/small_icons.gif") 0px 0px;
+}
+
+#github:hover {
+  background: url("../images/sprites/small_icons.gif") 21px 0px;
+}
+
+#emailme {
+  background: url("../images/sprites/small_icons.gif") 0px -63px;
+}
+
+#emailme:hover {
+  background: url("../images/sprites/small_icons.gif") 21px -63px;
+}
+
+#linkedin_dark {
+  background: url("../images/sprites/small_icons_dark.gif") 0px -21px;
+}
+
+#linkedin_dark:hover {
+  background: url("../images/sprites/small_icons_dark.gif") 21px -21px;
+}
+
+#facebook_dark {
+  background: url("../images/sprites/small_icons_dark.gif") 0px -42px;
+}
+
+#facebook_dark:hover {
+  background: url("../images/sprites/small_icons_dark.gif") 21px -42px;
+}
+
+#github_dark {
+  background: url("../images/sprites/small_icons_dark.gif") 0px 0px;
+}
+
+#github_dark:hover {
+  background: url("../images/sprites/small_icons_dark.gif") 21px 0px;
+}
+
+#emailme_dark {
+  background: url("../images/sprites/small_icons_dark.gif") 0px -63px;
+}
+
+#emailme_dark:hover {
+  background: url("../images/sprites/small_icons_dark.gif") 21px -63px;
+}
+
+/* Contacts Sprites */
+#emailme_big, #linkedin_big {
+  width: 265px;
+  height: 80px;
+  margin: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#emailme_big a, #linkedin_big a {
+  height: 80px;
+  display: block;
+  box-sizing: border-box;
+}
+
+#emailme_big {
+  background: url("../images/sprites/big_icons.gif") 0px 0px;
+}
+
+#emailme_big:hover {
+  background: url("../images/sprites/big_icons.gif") 0 -81px;
+}
+
+#linkedin_big {
+  background: url("../images/sprites/big_icons.gif") 0px -162px;
+}
+
+#linkedin_big:hover {
+  background: url("../images/sprites/big_icons.gif") 0 -243px;
 }

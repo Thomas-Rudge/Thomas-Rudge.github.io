@@ -72,9 +72,11 @@ var paddify = function(padText, padChar, padLength, padDirection) {
    }
    
    if (padDirection === 'l') {
-      return padText + padChar.repeat(padLength - padText.length);
+      return padText + Array(padLength - padText.length + 1).join(padChar)
+      //return padText + padChar.repeat(padLength - padText.length); Not supported by IE
    } else {
-      return padChar.repeat(padLength - padText.length) + padText;
+      return Array(padLength - padText.length + 1).join(padChar) + padText
+      //return padChar.repeat(padLength - padText.length) + padText; Not supported by IE
    }   
 };
 

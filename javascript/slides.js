@@ -4,14 +4,14 @@ var currentPage; // Allows adjustment in slideshow behaviour (Design/Photo)
 var currentBody;
 
 // Respond to keyboard input
-document.onkeydown = function() {
+document.onkeydown = function(event) {
    if (event.defaultPrevented){
       return;
    }
    
    var key = event.which || event.key || event.keyCode;
    var blackDiv = document.getElementById("blackdiv");
-   
+   console.log(key);
    switch(key) {
       case 27: // Escape
       case 'Escape':
@@ -67,7 +67,7 @@ var toggleBlackDiv = function() {
    } else {
       ele.style.display = "block";
       ele.style.visibility = "visible";
-      ele.style.opacity = 0.7;
+      ele.style.opacity = 0.9;
    }
 };
 
@@ -100,9 +100,11 @@ var paddify = function(padText, padChar, padLength, padDirection) {
    }
    
    if (padDirection === 'l') {
-      return padText + padChar.repeat(padLength - padText.length);
+      return padText + Array(padLength - padText.length + 1).join(padChar)
+      //return padText + padChar.repeat(padLength - padText.length); Not supported by IE
    } else {
-      return padChar.repeat(padLength - padText.length) + padText;
+      return Array(padLength - padText.length + 1).join(padChar) + padText
+      //return padChar.repeat(padLength - padText.length) + padText; Not supported by IE
    }   
 };
 
@@ -118,11 +120,15 @@ var hideBlackDiv = function() {
 // Move the slideshow in a direction
 var imageToggle = function(direction) {
    if (currentPage === 'DESIGN') {
-      var validIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+      var validIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
       var divName = 'dimg';
    } else {
-      var validIds = []
       var divName = 'pimg';
+      var validIds = [];
+      
+      for (var i = 1; i < 55; i++) {
+        validIds.push(i);
+      }
    }
    
    var currentImageInt = parseInt(currentId.replace('dimg','').replace('pimg',''));
@@ -191,6 +197,7 @@ var contractImageView = function(imageId) {
 
 var toggleBanner = function() {
    var banner = document.getElementById(currentPage);
+   console.log(currentPage);
    var rect = banner.getBoundingClientRect();
    // If the screen is too small
    if (banner.style.textAlign === 'left') {
@@ -199,6 +206,7 @@ var toggleBanner = function() {
    } else if (document.body.scrollTop <= 130) {
       banner.style.opacity = 0;
       setTimeout(function(){
+         banner.style.opacity = 0;
          banner.style.width = 'auto';
          banner.style.position = 'absolute';
       }, 100);
@@ -224,6 +232,10 @@ var onLoadActivities = function() {
       currentPage = 'PHOTO';
       currentBody = 'bphoto';
       rotatePhotoBanner();
+      
+      var containDiv = document.getElementById('container');
+      containDiv.style.backgroundColor = '#131313';
+      containDiv.style.boxShadow = '1px 0px 40px black';      
    }
 };
 

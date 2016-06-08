@@ -38,38 +38,41 @@
 
 <body id=bphoto>
   <div id=container>
-    <header>
-      <img class=myphoto src="..\images\me.png">
+    <header class=black>
+      <a href="..\index.html" title="Home">
+        <img class=myphoto src="..\images\me.png">
+      </a>
       <div id=headerdiv>
         <h1 class=myname>Thomas Rudge</h1>
         <nav>
 	       <ul class=navlist>
-            <li class=navli><a href="..\index.html" title="Home">&#9978;</a></li>
-		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
-		      <li class=navli><a href="software.html" title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a id=selected_page title="Photographs">Photography &#128247;</a></li>
-		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
+           <li class=navli><a id=home_symbol class=black href="..\index.html" title="Home">&#9978;</a></li>
+		       <li class=navli><a class=black href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
+		      <li class=navli><a class=black href="software.html" title="Personal software projects">Software &#9000;</a></li>
+		      <li class=navli><a class=black href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
+		      <li class=navli><a class=black id=selected_page title="Photographs">Photography &#128247;</a></li>
+		      <li class=navli><a class=black href="contact.html" title="Contact me">Contact &#9993;</a></li>
 	       </ul>
         </nav>
       </div>
       <ul id=socialbar>
-          <li>
-            <a href="https://in.linkedin.com/in/thomasrudge" title="Connect on Linkedin" target="_blank">
-              <img class=socialimg src="..\images\linkedin_logo.png" alt="Linkedin">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/nepos.software/" title="Nepos on Facebook" target="_blank">
-              <img class=socialimg src="..\images\facebook_logo.png" alt="Facebook">
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Thomas-Rudge" title="Connect on GitHub" target="_blank">
-              <img class=socialimg src="..\images\git_logo.png" alt="GitHub">
-            </a>
-          </li>
-        </ul>
+        <li id=linkedin_dark>
+          <a href="https://www.linkedin.com/in/thomasrudge" title="Connect on Linkedin" target="_blank">
+          </a>
+        </li>
+        <li id=facebook_dark>
+          <a href="https://www.facebook.com/nepos.software/" title="Nepos on Facebook" target="_blank">
+          </a>
+        </li>
+        <li id=github_dark>
+          <a href="https://github.com/Thomas-Rudge" title="Connect on GitHub" target="_blank">
+          </a>
+        </li>
+        <li id=emailme_dark>
+          <a href="mailto:thomas.rudge85@gmail.com" title="Get in touch">
+          </a>
+        </li>
+      </ul>
     </header>
     <div class=gen_div>
       <img id=PHOTO src="..\images\photography\main1.png" alt="Photography Banner">
@@ -80,79 +83,264 @@
     ...but first you'll need to enable Javascript.
     </div>
     <br>
-    <div class=rowcontainer>  
-      <div id=dimg01 class=design_div>
-        <img src="..\images\design\GSLL1.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg01')">
-        <p class='gen_text small_text invert_text'>The cover page of a brochure create for Gunpati Stock Ltd.</p>
+    <div class=rowcontainer>
+      <div id=pimg01 class=photo_div>
+        <img src="..\images\photography\photo01.jpg" alt="photo" title='Auto in Delhi' onclick="expandImageView('pimg01')">
+        <p class='gen_text centred small_text invert_text'>The inside of an auto in New Delhi</p>
       </div>
-      <div id=dimg02 class=design_div>
-        <img src="..\images\design\GSLL2.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg02')">
-        <p class='gen_text small_text invert_text'>The inner page of a brochure create for Gunpati Stock Ltd.</p>
+      <div id=pimg02 class=photo_div>
+        <img src="..\images\photography\photo02.jpg" alt="photo" title='Flower' onclick="expandImageView('pimg02')">
+        <p class='gen_text centred small_text invert_text'>A flower from my wife's garden.</p>
       </div>
-      <div id=dimg03 class=design_div>
-        <img src="..\images\design\GSLR.png" alt="GSL" title='GSL Annual Report' onclick="expandImageView('dimg03')">
-        <p class='gen_text small_text invert_text'>The cover page Gunpati Stock Ltd's Annual Report.</p>
+      <div id=pimg03 class=photo_div>
+        <img src="..\images\photography\photo03.jpg" alt="photo" title='Sleeping dog' onclick="expandImageView('pimg03')">
+        <p class='gen_text centred small_text invert_text'>Taken in Dimapur, India. (The dog's name is 'Baby')</p>
       </div>
     </div>
-    <br>
     <div class=rowcontainer>
-      <div id=dimg04 class=design_div>
-        <img src="..\images\design\obsidian_dir.png" alt="Obsidian" title='Obsidian Business Directory' onclick="expandImageView('dimg04')">
-        <p class='gen_text small_text invert_text'>The cover page for a directory of local businesses,<br>created for the Obsidian Business Interface.</p>
+      <div id=pimg04 class=photo_div>
+        <img src="..\images\photography\photo04.jpg" alt="photo" title='Kitchen window' onclick="expandImageView('pimg04')">
+        <p class='gen_text centred small_text invert_text'>A kitchen window in Dimapur, India.</p>
       </div>
-      <div id=dimg05 class=design_div>
-        <img src="..\images\design\obsidian_event.png" alt="Obsidian" title='Obsidian Event Report' onclick="expandImageView('dimg05')">
-        <p class='gen_text small_text invert_text'>Obsidian Business Interface event report cover page.</p>
+      <div id=pimg05 class=photo_div>
+        <img src="..\images\photography\photo05.jpg" alt="photo" title='Remote farm house' onclick="expandImageView('pimg05')">
+        <p class='gen_text centred small_text invert_text'>A house and rice fields in the remote jungles between Nagaland and Manipur.</p>
       </div>
-      <div id=dimg06 class=design_div>
-        <img src="..\images\design\EA1.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg06')">
-        <p class='gen_text small_text invert_text'>The cover page of an info-pack created for<br>Entrepreneurs Associates micro finance company.</p>
-      </div>
-      <div id=dimg07 class=design_div>
-        <img src="..\images\design\EA2.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg07')">
-        <p class='gen_text small_text invert_text'>An inner page of the EA info-pack.</p>
-      </div>
-      <div id=dimg08 class=design_div>
-        <img src="..\images\design\EA3.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg08')">
-        <p class='gen_text small_text invert_text'>An inner page of the EA info-pack.</p>
+      <div id=pimg06 class=photo_div>
+        <img src="..\images\photography\photo06.jpg" alt="photo" title='Amer Fort doorway' onclick="expandImageView('pimg06')">
+        <p class='gen_text centred small_text invert_text'>A doorway at the Amer Fort in Jaipur.</p>
       </div>
     </div>
-    <br>
     <div class=rowcontainer>
-      <div id=dimg09 class=design_div>
-        <img src="..\images\design\nepos.png" alt="Nepos" title='Nepos Logo' onclick="expandImageView('dimg09')">
-        <p class='gen_text small_text invert_text'>The logo of the Nepos cash management software.</p>
+      <div id=pimg07 class=photo_div>
+        <img src="..\images\photography\photo07.jpg" alt="photo" title='Sekrenyi festival' onclick="expandImageView('pimg07')">
+        <p class='gen_text centred small_text invert_text'>Angami women celebrate the Sekrenyi festival in Kohima.</p>
       </div>
-      <div id=dimg10 class=design_div>
-        <img src="..\images\design\nepos_splash.png" alt="Nepos" title='Nepos Splash Screen' onclick="expandImageView('dimg10')">
-        <p class='gen_text small_text invert_text'>The splash screen of the Nepos cash management software.</p>
+      <div id=pimg08 class=photo_div>
+        <img src="..\images\photography\photo08.jpg" alt="photo" title='Jungle bridge' onclick="expandImageView('pimg08')">
+        <p class='gen_text centred small_text invert_text'>A small rope bridge across the river Dzü at Chedema.</p>
+      </div>
+      <div id=pimg09 class=photo_div>
+        <img src="..\images\photography\photo09.jpg" alt="photo" title='Soya Beans' onclick="expandImageView('pimg09')">
+        <p class='gen_text centred small_text invert_text'>Soya beans drying in the sun.</p>
       </div>
     </div>
-    <br>
     <div class=rowcontainer>
-      <div id=dimg11 class=design_div>
-        <img src="..\images\design\4katalyst1.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg11')">
-        <p class='gen_text small_text invert_text'>The cover page of the Katalyst magazine, 4th edition.</p>
+      <div id=pimg10 class=photo_div>
+        <img src="..\images\photography\photo10.jpg" alt="photo" title='Woman and child' onclick="expandImageView('pimg10')">
+        <p class='gen_text centred small_text invert_text'>A woman carries her child through the streets of Jaipur.</p>
       </div>
-      <div id=dimg12 class=design_div>
-        <img src="..\images\design\4katalyst2.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg12')">
-        <p class='gen_text small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
+      <div id=pimg11 class=photo_div>
+        <img src="..\images\photography\photo11.jpg" alt="photo" title='Naga women' onclick="expandImageView('pimg11')">
+        <p class='gen_text centred small_text invert_text'>Naga women in traditional dress.</p>
       </div>
-      <div id=dimg13 class=design_div>
-        <img src="..\images\design\4katalyst3.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg13')">
-        <p class='gen_text small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
+      <div id=pimg12 class=photo_div>
+        <img src="..\images\photography\photo12.jpg" alt="photo" title='Decorated doorway' onclick="expandImageView('pimg12')">
+        <p class='gen_text centred small_text invert_text'>A doorway in Kolkata.</p>
       </div>
-      <div id=dimg14 class=design_div>
-        <img src="..\images\design\4katalyst4.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg14')">
-        <p class='gen_text small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg13 class=photo_div>
+        <img src="..\images\photography\photo13.jpg" alt="photo" title='Barak Valley' onclick="expandImageView('pimg13')">
+        <p class='gen_text centred small_text invert_text'>A woman walking through rice fields<br>in Barak Valley, Manipur.</p>
+      </div>
+      <div id=pimg14 class=photo_div>
+        <img src="..\images\photography\photo14.jpg" alt="photo" title='Amer Fort' onclick="expandImageView('pimg14')">
+        <p class='gen_text centred small_text invert_text'>Men take shelter from the midday sun<br>at Amer Fort, Jaipur.</p>
+      </div>
+      <div id=pimg15 class=photo_div>
+        <img src="..\images\photography\photo15.jpg" alt="photo" title='Dzülake' onclick="expandImageView('pimg15')">
+        <p class='gen_text centred small_text invert_text'>Dzülake river outside Poilwa Village, Nagaland.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg16 class=photo_div>
+        <img src="..\images\photography\photo16.jpg" alt="photo" title='Yimchunger' onclick="expandImageView('pimg16')">
+        <p class='gen_text centred small_text invert_text'>Yimchunger men, Nagaland.</p>
+      </div>
+      <div id=pimg17 class=photo_div>
+        <img src="..\images\photography\photo17.jpg" alt="photo" title='Doyang Lake' onclick="expandImageView('pimg17')">
+        <p class='gen_text centred small_text invert_text'>A local's fishing boat lays beached<br>on the shores of Doyang Lake, Wokha.</p>
+      </div>
+      <div id=pimg18 class=photo_div>
+        <img src="..\images\photography\photo18.jpg" alt="photo" title='Kohima' onclick="expandImageView('pimg18')">
+        <p class='gen_text centred small_text invert_text'>A taxi driving down a side-road<br>in Kohima, Nagaland.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg19 class=photo_div>
+        <img src="..\images\photography\photo19.jpg" alt="photo" title='Passageway' onclick="expandImageView('pimg19')">
+        <p class='gen_text centred small_text invert_text'>A decorated passageway in Jaipur.</p>
+      </div>
+      <div id=pimg20 class=photo_div>
+        <img src="..\images\photography\photo20.jpg" alt="photo" title='Mithun' onclick="expandImageView('pimg20')">
+        <p class='gen_text centred small_text invert_text'>A mithun in the Pulie Badze Wildlife Sanctuary.</p>
+      </div>
+      <div id=pimg21 class=photo_div>
+        <img src="..\images\photography\photo21.jpg" alt="photo" title='Mon Naga' onclick="expandImageView('pimg21')">
+        <p class='gen_text centred small_text invert_text'>Naga's from the Mon tribe.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg22 class=photo_div>
+        <img src="..\images\photography\photo22.jpg" alt="photo" title='Skulls' onclick="expandImageView('pimg22')">
+        <p class='gen_text centred small_text invert_text'>Assorted animal skulls hanging in Jotsoma.</p>
+      </div>
+      <div id=pimg23 class=photo_div>
+        <img src="..\images\photography\photo23.jpg" alt="photo" title='Fisherman' onclick="expandImageView('pimg23')">
+        <p class='gen_text centred small_text invert_text'>A fisherman carries away his catch in Doyang, Wokha.</p>
+      </div>
+      <div id=pimg24 class=photo_div>
+        <img src="..\images\photography\photo24.jpg" alt="photo" title='Wrestling' onclick="expandImageView('pimg24')">
+        <p class='gen_text centred small_text invert_text'>Wrestling competition during the Angami Sekrenyi festival.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg25 class=photo_div>
+        <img src="..\images\photography\photo25.jpg" alt="photo" title='Yimchunger man' onclick="expandImageView('pimg25')">
+        <p class='gen_text centred small_text invert_text'>A man from the Yimchunger tribe, Nagaland.</p>
+      </div>
+      <div id=pimg26 class=photo_div>
+        <img src="..\images\photography\photo26.jpg" alt="photo" title='Gauntlets' onclick="expandImageView('pimg26')">
+        <p class='gen_text centred small_text invert_text'>A Naga warrior's spiked gauntlets.</p>
+      </div>
+      <div id=pimg27 class=photo_div>
+        <img src="..\images\photography\photo27.jpg" alt="photo" title='Helmet' onclick="expandImageView('pimg27')">
+        <p class='gen_text centred small_text invert_text'>A Naga warrior's helmet, decorated with hog hair and orchid stem.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg28 class=photo_div>
+        <img src="..\images\photography\photo28.jpg" alt="photo" title='Yawning dog' onclick="expandImageView('pimg28')">
+        <p class='gen_text centred small_text invert_text'>A dog yawns outside Amer Fort, Jaipur.</p>
+      </div>
+      <div id=pimg29 class=photo_div>
+        <img src="..\images\photography\photo29.jpg" alt="photo" title='Amer Fort' onclick="expandImageView('pimg29')">
+        <p class='gen_text centred small_text invert_text'>Tourists explore the Amer Fort, Jaipur.</p>
+      </div>
+      <div id=pimg30 class=photo_div>
+        <img src="..\images\photography\photo30.jpg" alt="photo" title='Helmet' onclick="expandImageView('pimg30')">
+        <p class='gen_text centred small_text invert_text'>DDK Tower pokes through the clouds in Jotsoma.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg31 class=photo_div>
+        <img src="..\images\photography\photo31.jpg" alt="photo" title='Nagas' onclick="expandImageView('pimg31')">
+        <p class='gen_text centred small_text invert_text'>Naga's pose with ornamental tusks.</p>
+      </div>
+      <div id=pimg32 class=photo_div>
+        <img src="..\images\photography\photo32.jpg" alt="photo" title='Zubza' onclick="expandImageView('pimg32')">
+        <p class='gen_text centred small_text invert_text'>A decorated shaktiman truck parked outside a fruit stall in Zubza.</p>
+      </div>
+      <div id=pimg33 class=photo_div>
+        <img src="..\images\photography\photo33.jpg" alt="photo" title='Garden' onclick="expandImageView('pimg33')">
+        <p class='gen_text centred small_text invert_text'>Children and their dog.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg34 class=photo_div>
+        <img src="..\images\photography\photo34.jpg" alt="photo" title='Headdress' onclick="expandImageView('pimg34')">
+        <p class='gen_text centred small_text invert_text'>A naga woman's traditionl headdress.</p>
+      </div>
+      <div id=pimg35 class=photo_div>
+        <img src="..\images\photography\photo35.jpg" alt="photo" title='Passages' onclick="expandImageView('pimg35')">
+        <p class='gen_text centred small_text invert_text'>Winding passages at Amer Fort, Jaipur.</p>
+      </div>
+      <div id=pimg36 class=photo_div>
+        <img src="..\images\photography\photo36.jpg" alt="photo" title='Shop' onclick="expandImageView('pimg36')">
+        <p class='gen_text centred small_text invert_text'>A shop-seller outside Touphema.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg37 class=photo_div>
+        <img src="..\images\photography\photo37.jpg" alt="photo" title='Naga man' onclick="expandImageView('pimg37')">
+        <p class='gen_text centred small_text invert_text'>A naga man in colourful dress.</p>
+      </div>
+      <div id=pimg38 class=photo_div>
+        <img src="..\images\photography\photo38.jpg" alt="photo" title='Qutb Minar' onclick="expandImageView('pimg38')" style="width:100%">
+        <p class='gen_text centred small_text invert_text'>People visiting Qutb Minar in Delhi.</p>
+      </div>
+      <div id=pimg39 class=photo_div>
+        <img src="..\images\photography\photo39.jpg" alt="photo" title='Nettle Caterpillar' onclick="expandImageView('pimg39')">
+        <p class='gen_text centred small_text invert_text'>A Nettle Caterpillar, Kohima.</p>
+      </div>
+    </div>
+    <hr class=invert_hr>
+    <div class=rowcontainer>
+      <div id=pimg40 class=photo_div>
+        <img src="..\images\photography\photo40.jpg" alt="photo" title='Boats' onclick="expandImageView('pimg40')">
+        <p class='gen_text centred small_text invert_text'>Boats moored at St Michael's Mount, Cornwall.</p>
+      </div>
+      <div id=pimg41 class=photo_div>
+        <img src="..\images\photography\photo41.jpg" alt="photo" title='Cabin' onclick="expandImageView('pimg41')">
+        <p class='gen_text centred small_text invert_text'>A cabin of a fishing vessel in Poole.</p>
+      </div>
+      <div id=pimg42 class=photo_div>
+        <img src="..\images\photography\photo42.jpg" alt="photo" title='Lyme Regis' onclick="expandImageView('pimg42')">
+        <p class='gen_text centred small_text invert_text'>Lyme Regis, Dorset.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg43 class=photo_div>
+        <img src="..\images\photography\photo43.jpg" alt="photo" title='Reservoir' onclick="expandImageView('pimg43')">
+        <p class='gen_text centred small_text invert_text'>A control station on a reservoir in Wales.</p>
+      </div>
+      <div id=pimg44 class=photo_div>
+        <img src="..\images\photography\photo44.jpg" alt="photo" title='Lifeguard' onclick="expandImageView('pimg44')">
+        <p class='gen_text centred small_text invert_text'>A lifeguard watches surfers in Cornwall.</p>
+      </div>
+      <div id=pimg45 class=photo_div>
+        <img src="..\images\photography\photo45.jpg" alt="photo" title='Lymington' onclick="expandImageView('pimg45')">
+        <p class='gen_text centred small_text invert_text'>Lymington pier from the train window.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg46 class=photo_div>
+        <img src="..\images\photography\photo46.jpg" alt="photo" title='Swans' onclick="expandImageView('pimg46')">
+        <p class='gen_text centred small_text invert_text'>Swans swim in Mount Lake outside Keyhaven.</p>
+      </div>
+      <div id=pimg47 class=photo_div>
+        <img src="..\images\photography\photo47.jpg" alt="photo" title='Mushroom' onclick="expandImageView('pimg47')">
+        <p class='gen_text centred small_text invert_text'>A mushroom in a meadow, Purbeck District, Dorset.</p>
+      </div>
+      <div id=pimg48 class=photo_div>
+        <img src="..\images\photography\photo48.jpg" alt="photo" title='Fern' onclick="expandImageView('pimg48')">
+        <p class='gen_text centred small_text invert_text'>Autumn fern, Purbeck District, Dorset.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg49 class=photo_div>
+        <img src="..\images\photography\photo49.jpg" alt="photo" title='Oslo' onclick="expandImageView('pimg49')">
+        <p class='gen_text centred small_text invert_text'>The Oslo Opera House.</p>
+      </div>
+      <div id=pimg50 class=photo_div>
+        <img src="..\images\photography\photo50.jpg" alt="photo" title='Bangkok' onclick="expandImageView('pimg50')">
+        <p class='gen_text centred small_text invert_text'>An overpass in Bangkok, Thailand.</p>
+      </div>
+      <div id=pimg51 class=photo_div>
+        <img src="..\images\photography\photo51.jpg" alt="photo" title='Bangkok' onclick="expandImageView('pimg51')">
+        <p class='gen_text centred small_text invert_text'>Apartments in Bangkok, Thailand.</p>
+      </div>
+    </div>
+    <div class=rowcontainer>
+      <div id=pimg52 class=photo_div>
+        <img src="..\images\photography\photo52.jpg" alt="photo" title='Huahin' onclick="expandImageView('pimg52')">
+        <p class='gen_text centred small_text invert_text'>Birds getting some air in Huahin.</p>
+      </div>
+      <div id=pimg53 class=photo_div>
+        <img src="..\images\photography\photo53.jpg" alt="photo" title='Stuck' onclick="expandImageView('pimg53')">
+        <p class='gen_text centred small_text invert_text'>Stuck at the top of the world, Kohima.</p>
+      </div>
+      <div id=pimg54 class=photo_div>
+        <img src="..\images\photography\photo54.jpg" alt="photo" title='Daughter' onclick="expandImageView('pimg54')">
+        <p class='gen_text centred small_text invert_text'>My daughter waits at the kitchen door.</p>
       </div>
     </div>
     <div id=blackdiv>
     <a id=arrow_left  class=arrow onclick='imageToggle(-1)'>&#10096;</a>
     <a id=arrow_right class=arrow onclick='imageToggle(1)'>&#10097;</a>
     </div>
-    <br>
-    <hr>
+    <hr class=invert_hr>
     <footer class=relative_footer>
     &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by copyright.<br>
     Site not working properly? &#128534; <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
