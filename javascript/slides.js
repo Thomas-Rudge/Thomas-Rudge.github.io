@@ -18,15 +18,7 @@ document.onkeydown = function(event) {
          contractImageView(currentId)
          hideBlackDiv()
          break;
-      case 36: // Home key
-      case 'Home':
-         scroll(0,0);
-         var banner = document.getElementById('DESIGN');
-         banner.style.opacity = 0;
-         banner.style.width = 'auto';
-         banner.style.position = 'absolute';
-         break;
-         
+      
       case 37: // Left arrow key
       case 100:// Left arrow on numpad
       case 'Left':
@@ -147,79 +139,88 @@ var imageToggle = function(direction) {
 };
 
 
+var calcPosition = function(imgHeight, imgWidth) {
+  // Takes an images height and width and returns the top/left values 
+  // that will centre it on screen, while maintaining aspect ratio
+  var screenHeight = screen.height;
+  var screenWidth = screen.width;
+};
+
+
 var expandImageView = function(imageId) {
    // Get the width of the page
    var pageBody = document.getElementById(currentBody);
    var pageBodyHeight = window.innerHeight;
    var pageBodyWidth = pageBody.offsetWidth;
-   // Only do this if the screen is big enough
+   var imageDiv = document.getElementById(imageId);
+   var imageObj = imageDiv.children[0];
+   var paraObj = imageDiv.children[1];
+   // If you can't get the div or its image, then abort.
+   if (!imageDiv || !imageObj) {
+      return;
+   }   
+   // Change the images class.
+   imageDiv.className = 'active_design_div';
+   imageDiv.style.visibility = 'visible';
+   imageDiv.style.opacity = 1;
+   // Set the objects new onclick method to collapse the image
+   imageObj.onclick = function() {contractImageView(imageId);};
+   //
    if (pageBodyHeight > 550 && pageBodyWidth > 778) {
-      // Get the image object
-      var imageDiv = document.getElementById(imageId);
-      // Change the images class.
-      imageDiv.className = 'active_design_div';
       // Calculate the margins.
-      var imageWidth = imageDiv.offsetWidth;
-      var imageHeight = imageDiv.offsetHeight;
-      var leftOffset = (pageBodyWidth - imageWidth) / 2;
-      var topOffset = (pageBodyHeight - imageHeight) /2;
+      var imageDivWidth = imageDiv.offsetWidth || imageDiv.clientWidth;
+      var imageDivHeight = imageDiv.offsetHeight || imageDiv.clientHeight;
+      var leftOffset = (pageBodyWidth - imageDivWidth) / 2;
+      var topOffset = (pageBodyHeight - imageDivHeight) /2;
       // Adjust styling to make the div visible and centred.
       imageDiv.style.left = String(leftOffset) + 'px';
       imageDiv.style.top = String(topOffset) + 'px';
-      imageDiv.style.visibility = 'visible';
-      imageDiv.style.opacity = 1;
-      // Set the objects new onclick method to collapse the image
-      imageDiv.children[0].onclick = function() {contractImageView(imageId);};
-      //
-      currentId = imageId;
-      toggleBlackDiv();
-   }
-};
-
-
-var contractImageView = function(imageId) {
-   active_id = document.getElementById(imageId);
-   
-   if (!active_id) {
-      return;
-   }else if (currentPage === 'DESIGN') {
-      var standardClass = 'design_div';
    } else {
-      var standardClass = 'photo_div';
+      // This version will try to make the image as fullsreen as possible
+      // It is mostly intended for mobile phone devices.
+      imageObj.style.maxHeight = screen.height + 'px';
+      imageObj.style.maxWidth = screen.width  + 'px';
+      paraObj.style.display = 'none';
+      // Get the images dimensions and set its left/top values
+      var imageHeight = imageObj.offsetHeight || imageObj.clientHeight;
+      var imageWidth = imageObj.offsetWidth || imageObj.clientWidth;
+      imageObj.style.position = 'fixed';
+      imageObj.style.left = (Math.round((screen.width - imageWidth) / 2)).toString() + 'px';
+      imageObj.style.top = (Math.round((screen.height - imageHeight) / 2)).toString() + 'px';
+      // Don't show the navigation arrows
+      var blackDiv = document.getElementById("blackdiv");
+      blackDiv.children[0].style.display = 'none';
+      blackDiv.children[1].style.display = 'none';
    }
    
-   active_id.className = standardClass;
-   active_id.children[0].onclick = function() {expandImageView(imageId)};
-   
+   currentId = imageId;
    toggleBlackDiv();
 };
 
 
-var toggleBanner = function() {
-   var banner = document.getElementById(currentPage);
-   console.log(currentPage);
-   var rect = banner.getBoundingClientRect();
-   // If the screen is too small
-   if (banner.style.textAlign === 'left') {
-      return;
-   // If scroll up past the banner
-   } else if (document.body.scrollTop <= 130) {
-      banner.style.opacity = 0;
-      setTimeout(function(){
-         banner.style.opacity = 0;
-         banner.style.width = 'auto';
-         banner.style.position = 'absolute';
-      }, 100);
-   // If scroll down past the header navbar
-   } else if (document.body.scrollTop > 140) {
-      banner.style.position = 'inherit';
-      banner.style.width = '100%';
-      setTimeout(function(){
-         banner.style.opacity = 1;
-      }, 100);
+var contractImageView = function(imageId) {
+   var activeId = document.getElementById(imageId);
+   var activeImg = activeId.children[0];
+   var activePara = activeId.children[1];
+   var blackDiv = document.getElementById("blackdiv");
+   
+  if (currentPage === 'DESIGN') {
+      var standardClass = 'design_div';
+   } else {
+      var standardClass = 'photo_div';
    }
+   // Clean up if fullscreen (mobile) mode was used
+   blackDiv.children[0].style.display = 'block';
+   blackDiv.children[1].style.display = 'block';
+   activeImg.style = '';
+   activeId.style = '';
+   // Set the divs class to normal mode
+   activeId.className = standardClass;
+   // Reset images onclick function
+   activeImg.onclick = function() {expandImageView(imageId)};
+   
+   toggleBlackDiv();
 };
-
 
 var onLoadActivities = function() {
    var ele = document.getElementById('noscript');
@@ -235,13 +236,11 @@ var onLoadActivities = function() {
       
       var containDiv = document.getElementById('container');
       containDiv.style.backgroundColor = '#131313';
-      containDiv.style.boxShadow = '1px 0px 40px black';      
+      containDiv.style.boxShadow = '1px 0px 40px black';
    }
 };
 
 // This will collapse any open image on a resize.
 window.onresize = function() {contractImageView(currentId); hideBlackDiv()};
-// This hides the banner if the person scrolls up to the main header
-window.onscroll = function() {toggleBanner()};
 // Remove the noscript div
 window.onload = function() {onLoadActivities()};
