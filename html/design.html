@@ -11,6 +11,7 @@
   <!-- CSS & JS -->
   <link rel="stylesheet" href="../css/main.css">
   <script type="text/javascript" src="../javascript/slides.js"></script>
+  <script type="text/javascript" src="../javascript/mobile_navigation.js" async></script>
   <!-- Icons-->
   <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png">
@@ -39,21 +40,34 @@
 <body id=bdesign>
   <div id=container>
     <header>
-      <a href="..\index.html" title="Home">
-        <img class=myphoto src="..\images\logos\me.png">
+      <a href="../index.html" title="Home">
+        <img class=myphoto src="../images/logos/me.png" alt='My head photo'>
       </a>
       <div id=headerdiv>
         <h1 class=myname>Thomas Rudge</h1>
-        <nav>
+        <nav id=mainnav>
 	       <ul class=navlist>
-            <li class=navli><a id=home_symbol href="..\index.html" title="Home">&#9978;</a></li>
-		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
-		      <li class=navli><a href="software.html" title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a id=selected_page title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography &#128247;</a></li>
-		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
+            <li class=navli><a id=home_symbol href="../index.html" title="Home"><span class=main_glyph>&#9978;</span></a></li>
+		      <li class=navli><a href="professional.html" title="Professional work experience">Professional <span class=main_glyph>&#9874;</span></a></li>
+		      <li class=navli><a href="software.html" title="Personal software projects">Software <span class=main_glyph>&#9000;</span></a></li>
+		      <li class=navli><a id=selected_page title="Design work">Design <span class=main_glyph>&#9998;</span></a></li>
+		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography <span class=main_glyph>&#128247;</span></a></li>
+		      <li class=navli><a href="contact.html" title="Contact me">Contact <span class=main_glyph>&#9993;</span></a></li>
 	       </ul>
         </nav>
+        <div id=navmobile>
+        <a id=mobile_navlink onclick='toggleNavPane(1)'></a>
+        </div>
+        <div id=mobilelist>
+          <ul class=gen_text>
+            <li><a class=mobile_menu_item href="../index.html" title="Home"><span class=main_glyph>&#9978;</span> Home</li>
+            <li><a class=mobile_menu_item href="professional.html" title="Professional work experience"><span class=main_glyph>&#9874;</span> Professional</a></li>
+		        <li><a class=mobile_menu_item href="software.html" title="Personal software projects"><span class=main_glyph>&#9000;</span> Software</a></li>
+		        <li><a id=mobile_selected title="Design work"><span class=main_glyph>&#9998;</span> Design</a></li>
+		        <li><a class=mobile_menu_item href="photography.html" title="Photographs"><span class=main_glyph>&#128247;</span>Photography</a></li>
+		        <li><a class=mobile_menu_item href="contact.html" title="Contact me"><span class=main_glyph>&#9993;</span> Contact</a></li>
+          </ul>
+        </div>
       </div>
       <ul id=socialbar>
         <li id=linkedin>
@@ -75,7 +89,7 @@
       </ul>
     </header>
     <div class=gen_div>
-      <img id=DESIGN src="..\images\design\main.png" alt="Graphic Design Banner">
+      <img id=DESIGN src="../images/design/main.png" alt="Graphic Design Banner">
     </div>
     <br>
     <div id=noscript>
@@ -84,94 +98,94 @@
     <br>
     <div class=rowcontainer>
       <div id=dimg01 class=design_div>
-        <img src="..\images\design\4katalyst1.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg01')">
+        <img src="../images/design/4katalyst1.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg01')">
         <p class='gen_text centred small_text invert_text'>The cover page of the Katalyst magazine, 4th edition.</p>
       </div>
       <div id=dimg02 class=design_div>
-        <img src="..\images\design\4katalyst2.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg02')">
+        <img src="../images/design/4katalyst2.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg02')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
       </div>
       <div id=dimg03 class=design_div>
-        <img src="..\images\design\4katalyst3.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg03')">
+        <img src="../images/design/4katalyst3.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg03')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
       </div>
     </div>
     <br>
     <div class=rowcontainer>
       <div id=dimg04 class=design_div>
-        <img src="..\images\design\4katalyst5.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg04')">
+        <img src="../images/design/4katalyst5.png" alt="Katalyst" title='Katalyst Magazine #4' onclick="expandImageView('dimg04')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 4th edition.</p>
       </div>
       <div id=dimg05 class=design_div>
-        <img src="..\images\design\5katalyst1.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg05')">
+        <img src="../images/design/5katalyst1.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg05')">
         <p class='gen_text centred small_text invert_text'>The editorial for the Katalyst magazine, 5th edition.</p>
       </div>
       <div id=dimg06 class=design_div>
-        <img src="..\images\design\4katalyst4.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg06')">
+        <img src="../images/design/4katalyst4.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg06')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 5th edition.</p>
       </div>
     </div>
     <br>
     <div class=rowcontainer>
       <div id=dimg07 class=design_div>
-        <img src="..\images\design\5katalyst2.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg07')">
+        <img src="../images/design/5katalyst2.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg07')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 5th edition.</p>
       </div>
       <div id=dimg08 class=design_div>
-        <img src="..\images\design\5katalyst3.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg08')">
+        <img src="../images/design/5katalyst3.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg08')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 5th edition.</p>
       </div>
       <div id=dimg09 class=design_div>
-        <img src="..\images\design\5katalyst4.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg09')">
+        <img src="../images/design/5katalyst4.png" alt="Katalyst" title='Katalyst Magazine #5' onclick="expandImageView('dimg09')">
         <p class='gen_text centred small_text invert_text'>An article in the Katalyst magazine, 5th edition.</p>
       </div>
     </div>
     <br>
     <div class=rowcontainer>
       <div id=dimg10 class=design_div>
-        <img src="..\images\design\nepos.png" alt="Nepos" title='Nepos Logo' onclick="expandImageView('dimg10')">
+        <img src="../images/design/nepos.png" alt="Nepos" title='Nepos Logo' onclick="expandImageView('dimg10')">
         <p class='gen_text centred small_text invert_text'>The logo of the Nepos cash management software.</p>
       </div>
       <div id=dimg11 class=design_div>
-        <img src="..\images\design\nepos_splash.png" alt="Nepos" title='Nepos Splash Screen' onclick="expandImageView('dimg11')">
+        <img src="../images/design/nepos_splash.png" alt="Nepos" title='Nepos Splash Screen' onclick="expandImageView('dimg11')">
         <p class='gen_text centred small_text invert_text'>The splash screen of the Nepos cash management software.</p>
       </div>
     </div>
     <br>
     <div class=rowcontainer>  
       <div id=dimg12 class=design_div>
-        <img src="..\images\design\GSLL1.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg12')">
+        <img src="../images/design/GSLL1.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg12')">
         <p class='gen_text centred small_text invert_text'>The cover page of a brochure create for Gunpati Stock Ltd.</p>
       </div>
       <div id=dimg13 class=design_div>
-        <img src="..\images\design\GSLL2.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg13')">
+        <img src="../images/design/GSLL2.png" alt="GSL" title='GSL Brochure' onclick="expandImageView('dimg13')">
         <p class='gen_text centred small_text invert_text'>The inner page of a brochure create for Gunpati Stock Ltd.</p>
       </div>
       <div id=dimg14 class=design_div>
-        <img src="..\images\design\GSLR.png" alt="GSL" title='GSL Annual Report' onclick="expandImageView('dimg14')">
+        <img src="../images/design/GSLR.png" alt="GSL" title='GSL Annual Report' onclick="expandImageView('dimg14')">
         <p class='gen_text centred small_text invert_text'>The cover page Gunpati Stock Ltd's Annual Report.</p>
       </div>
     </div>
     <br>
     <div class=rowcontainer>
       <div id=dimg15 class=design_div>
-        <img src="..\images\design\obsidian_dir.png" alt="Obsidian" title='Obsidian Business Directory' onclick="expandImageView('dimg15')">
+        <img src="../images/design/obsidian_dir.png" alt="Obsidian" title='Obsidian Business Directory' onclick="expandImageView('dimg15')">
         <p class='gen_text centred small_text invert_text'>The cover page for a directory of local businesses,<br>created for the Obsidian Business Interface.</p>
       </div>
       <div id=dimg16 class=design_div>
-        <img src="..\images\design\obsidian_event.png" alt="Obsidian" title='Obsidian Event Report' onclick="expandImageView('dimg16')">
+        <img src="../images/design/obsidian_event.png" alt="Obsidian" title='Obsidian Event Report' onclick="expandImageView('dimg16')">
         <p class='gen_text centred small_text invert_text'>Obsidian Business Interface event report cover page.</p>
       </div>
       <div id=dimg17 class=design_div>
-        <img src="..\images\design\EA1.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg17')">
+        <img src="../images/design/EA1.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg17')">
         <p class='gen_text centred small_text invert_text'>The cover page of an info-pack created for<br>Entrepreneurs Associates micro finance company.</p>
       </div>
       <div id=dimg18 class=design_div>
-        <img src="..\images\design\EA2.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg18')">
+        <img src="../images/design/EA2.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg18')">
         <p class='gen_text centred small_text invert_text'>An inner page of the EA info-pack.</p>
       </div>
       <div id=dimg19 class=design_div>
-        <img src="..\images\design\EA3.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg19')">
+        <img src="../images/design/EA3.png" alt="EA" title='Entrepreneurs Associates' onclick="expandImageView('dimg19')">
         <p class='gen_text centred small_text invert_text'>An inner page of the EA info-pack.</p>
       </div>
     </div>

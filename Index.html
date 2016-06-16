@@ -8,8 +8,10 @@
   <meta name="description" content="The resume of Thomas Rudge">
   <meta name="author" content="Thomas Rudge">
   <meta name="keywords" content="Thomas, Rudge, Edward, resume, cv, curriculum vitae, job">
-  <!-- Icons-->
+  <!-- CSS & JS -->
   <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="javascript/mobile_navigation.js" async></script>
+  <!-- Icons-->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
@@ -37,19 +39,32 @@
 <body id=bhome style='height:100%;'>
   <div id=container style='height:100%;'>
     <header>
-      <img class=myphoto src="images\logos\me.png">
+      <img class=myphoto src="images/logos/me.png" alt='My head photo'>
       <div id=headerdiv>
         <h1 class=myname>Thomas Rudge</h1>
-        <nav>
-	       <ul class=navlist>
-            <li class=navli><a id=selected_page title="Home">&#9978;</a></li>
-		      <li class=navli><a href="html\professional.html" title="Professional work experience">Professional &#9874;</a></li>
-		      <li class=navli><a href="html\software.html" title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a href="html\design.html#DESIGN" title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="html\photography.html#PHOTO" title="Photographs">Photography &#128247;</a></li>
-		      <li class=navli><a href="html\contact.html" title="Contact me">Contact &#9993;</a></li>
-	       </ul>
+        <nav id=mainnav>
+	        <ul class=navlist>
+            <li class=navli><a id=selected_page title="Home"><span class=main_glyph>&#9978;</span></a></li>
+		        <li class=navli><a href="html/professional.html" title="Professional work experience">Professional <span class=main_glyph>&#9874;</span></a></li>
+		        <li class=navli><a href="html/software.html" title="Personal software projects">Software <span class=main_glyph>&#9000;</span></a></li>
+		        <li class=navli><a href="html/design.html#DESIGN" title="Design work">Design <span class=main_glyph>&#9998;</span></a></li>
+		        <li class=navli><a href="html/photography.html#PHOTO" title="Photographs">Photography <span class=main_glyph>&#128247;</span></a></li>
+		        <li class=navli><a href="html/contact.html" title="Contact me">Contact <span class=main_glyph>&#9993;</span></a></li>
+	        </ul>
         </nav>
+        <div id=navmobile>
+        <a id=mobile_navlink onclick='toggleNavPane(0)'></a>
+        </div>
+        <div id=mobilelist>
+          <ul class=gen_text>
+            <li><a id=mobile_selected title="Home"><span class=main_glyph>&#9978;</span> Home</li>
+            <li><a class=mobile_menu_item href="html/professional.html" title="Professional work experience"><span class=main_glyph>&#9874;</span> Professional</a></li>
+		        <li><a class=mobile_menu_item href="html/software.html" title="Personal software projects"><span class=main_glyph>&#9000;</span> Software</a></li>
+		        <li><a class=mobile_menu_item href="html/design.html" title="Design work"><span class=main_glyph>&#9998;</span> Design</a></li>
+		        <li><a class=mobile_menu_item href="html/photography.html" title="Photographs"><span class=main_glyph>&#128247;</span>Photography</a></li>
+		        <li><a class=mobile_menu_item href="html/contact.html" title="Contact me"><span class=main_glyph>&#9993;</span> Contact</a></li>
+          </ul>
+        </div>
       </div>
       <ul id=socialbar>
         <li id=linkedin>
@@ -82,7 +97,7 @@
     </div>
     <footer id=index_footer>
     &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by copyright.<br>
-    Site not working properly? &#128534; <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
+    Site not working properly? <span class=main_glyph>&#128534;</span> <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
     </footer>
   </div>
 </body>

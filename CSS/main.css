@@ -24,6 +24,18 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+	font-family: 'GlyphSubSet';
+	src: url('../fonts/GlyphSubSet.eot');
+	src: url('../fonts/GlyphSubSet.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GlyphSubSet.woff2') format('woff2'),
+		url('../fonts/GlyphSubSet.woff') format('woff'),
+		url('../fonts/GlyphSubSet.ttf') format('truetype'),
+		url('../fonts/GlyphSubSet.svg#GlyphSubSet') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
   
 /*Responsive design bit*/
 @media screen and (max-width: 1132px) {
@@ -143,6 +155,10 @@
   .justify {
     text-align: left !important;
   }
+  #headerdiv {
+    display: inline-block !important;
+    box-sizing: border-box !important;
+  }
   #skill_list {
     display: block !important;
   }
@@ -161,8 +177,19 @@
   #short_table2 {
     display: block !important;
   }
+  #mainnav {
+    display: none !important;
+  }
+  #navmobile {
+    display: block !important;
+  }
 }
 
+@media screen and (max-width: 620px) {
+  .myname {
+    font-size: 40px !important;
+  }
+}
 
 @media screen and (max-width: 520px) {
   #headerdiv {
@@ -189,6 +216,142 @@
   .margin70 {
     margin: 0px 10px 0px 10px !important;
   }
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: table-row !important;
+  }
+  .img150 {
+    width: 75px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .myname {
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .myname {
+    font-size: 23px !important;
+    margin: 30px 0px 0px 10px !important;
+  }
+}
+
+/* iPhones and iPads can't handle the layout on the software page.
+
+  iPhone 4 variations*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: block !important;
+  }
+  .img150 {
+    width: 75px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+}
+/*iPhone 5 variations*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: block !important;
+  }
+  .img150 {
+    width: 75px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+}
+/*iPhone 6 variations*/
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: block !important;
+  }
+  .img150 {
+    width: 75px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+}
+/* iPad Mini */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: block !important;
+  }
+  .img150 {
+    width: 75px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+}
+/* iPad 1/2 */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: block !important;
+  }
+  .img150 {
+    width: 100px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+/* iPad 3/4 */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .mobile_parent {
+    display: table !important;
+  }
+  .mobile_child {
+    display: block !important;
+  }
+  .img150 {
+    width: 100px !important;
+  }
+  .genphoto {
+    margin: 20px 0px 4px 10px !important;
+  }
+}
 }
   
 /*Main CSS*/
@@ -280,7 +443,7 @@ nav a:hover {
   background-color: #404040;
   transition: background-color 0.3s;
   -webkit-transition: background-color 0.3s;
-  content: &#9874;
+  content: <span class=main_glyph>&#9874;</span>
 }
    
 .navli {
@@ -316,11 +479,6 @@ nav a:hover {
   height: 150px;
   margin: 15px 0px 0px 65px;
   float: left;
-}
-
-.genphoto {
-  border: none;
-  margin-top: 20px;
 }
 
 .table_img {
@@ -468,7 +626,18 @@ nav a:hover {
   padding: 0px 0px 0px 0px;
   display: inline-flex;
 }
- 
+
+.genphoto {
+  border: none;
+  padding: 0;
+  margin: 20px 0px 0px 0px;
+}
+
+.img150 {
+  width: 150px;
+  height: auto;
+}
+
 .photo_div {
   height: 300px;
   width: 300px;
@@ -477,8 +646,6 @@ nav a:hover {
   margin: 20px;
   display: block;
   background-color: transparent;
-  transition: 0.1s 0.5s opacity ease;
-  webkit-transition: 0.1s 0.5s opacity ease;
 }
 
 .photo_div img {
@@ -489,6 +656,8 @@ nav a:hover {
   border-color: black;
   border-style: solid;
   background-color: #333333;
+  max-width: none;
+  max-height: none;
 }
 
 .photo_div p {
@@ -552,6 +721,10 @@ nav a:hover {
   visibility: hidden;
 }
 
+.active_design_div img {
+  display: block;
+}
+
 .active_design_div p {
   display: block;
   padding: 10px 10px 10px 10px;
@@ -577,7 +750,11 @@ nav a:hover {
 
 .rowcontainer {
   width: 100%;
+  max-width: 1130px;
+  display: -webkit-inline-box;/* For really old versions of safari*/
+  display: -webkit-flex;/* For safari 8.1 */
   display: flex;
+  box-align: center;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
@@ -596,7 +773,12 @@ nav a:hover {
 
 .img_div {
   margin: auto;
+  display: -webkit-flex;/* For safari 8.1 */
   display: flex;
+}
+
+.align_left {
+  align: left;
 }
 
 .centred {
@@ -612,6 +794,10 @@ nav a:hover {
   text-align: right;
 }
 
+.nopad td {
+  padding: 0;
+}
+
 .black {
   background-color: #131313;
   color: #efefef;
@@ -623,6 +809,10 @@ nav a:hover {
 
 .fullwidth {
   width: 100%;
+}
+
+.main_glyph {
+  font-family: GlyphSubSet;
 }
   
 .margin0 {
@@ -639,6 +829,10 @@ nav a:hover {
   
 .margin30 {
   margin: 15px 30px 0px 30px;
+}
+
+.mobile_menu_item {
+  color: #1d43f0;
 }
 
 #empty {
@@ -670,6 +864,7 @@ nav a:hover {
   }
   
 #contact_div {
+  display: -webkit-flex;/* For safari 8.1 */
   display: flex;
   margin: 80px 0px 40px 0px;
 }
@@ -794,6 +989,54 @@ nav a:hover {
 #arrow_right {
   right: 30px;
   top: 50%;
+}
+
+#navmobile {
+  display: none;
+  height: 70px;
+  width: 70px;
+  background-color: transparent;
+  margin: 10px 0px 0px 30px;
+  padding: 0px;
+  border-radius: 10px;
+  background: url("../images/sprites/mobile_button.png") 0px 0px;
+}
+
+#navmobile a {
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 100%;
+}
+
+#mobile_selected {
+  color: black;
+}
+
+#mobilelist {
+  display: none;
+  position: absolute;
+  background: #d0d8ff;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0px 0px 0px -25px;
+  z-index:4;
+}
+
+#mobilelist ul {
+  margin: 16px;
+  padding: 0px;
+  list-style: none;
+  left: auto;
+}
+
+#mobilelist li {
+  padding: 3px 0px 3px 0px;
+}
+
+#mobilelist a {
+  font-size: 18px;
+  text-decoration: none;
 }
   
 /* Body background images*/

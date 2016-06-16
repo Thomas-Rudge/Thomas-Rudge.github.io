@@ -11,6 +11,7 @@
   <!-- CSS & JS -->
   <link rel="stylesheet" href="../css/main.css">
   <script type="text/javascript" src="../javascript/MT940_50.js" async></script>
+  <script type="text/javascript" src="../javascript/mobile_navigation.js" async></script>
   <!-- Icons-->
   <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png">
@@ -42,19 +43,32 @@
     Woops! You have Javascript disabled. Unfortunately this page is as useful as a chocolate teapot without it (but not as tasty).
     </div>
     <header>
-      <img class=myphoto src="..\images\logos\me.png">
+      <img class=myphoto src="../images/logos/me.png" alt='My head photo'>
       <div id=headerdiv>
         <h1 class=myname>Thomas Rudge</h1>
-        <nav>
+        <nav id=mainnav>
 	       <ul class=navlist>
-            <li class=navli><a id=home_symbol href="..\index.html" title="Home">&#9978;</a></li>
-		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
-		      <li class=navli><a href="software.html" id=selected_page title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography &#128247;</a></li>
-		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
+            <li class=navli><a id=home_symbol href="../index.html" title="Home"><span class=main_glyph>&#9978;</span></a></li>
+		      <li class=navli><a href="professional.html" title="Professional work experience">Professional <span class=main_glyph>&#9874;</span></a></li>
+		      <li class=navli><a href="software.html" id=selected_page title="Personal software projects">Software <span class=main_glyph>&#9000;</span></a></li>
+		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design <span class=main_glyph>&#9998;</span></a></li>
+		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography <span class=main_glyph>&#128247;</span></a></li>
+		      <li class=navli><a href="contact.html" title="Contact me">Contact <span class=main_glyph>&#9993;</span></a></li>
 	       </ul>
         </nav>
+        <div id=navmobile>
+        <a id=mobile_navlink onclick='toggleNavPane(1)'></a>
+        </div>
+        <div id=mobilelist>
+          <ul class=gen_text>
+            <li><a class=mobile_menu_item href="../index.html" title="Home"><span class=main_glyph>&#9978;</span> Home</li>
+            <li><a class=mobile_menu_item href="professional.html" title="Professional work experience"><span class=main_glyph>&#9874;</span> Professional</a></li>
+		        <li><a id=mobile_selected href="software.html" title="Personal software projects"><span class=main_glyph>&#9000;</span> Software</a></li>
+		        <li><a class=mobile_menu_item href="design.html" title="Design work"><span class=main_glyph>&#9998;</span> Design</a></li>
+		        <li><a class=mobile_menu_item href="photography.html" title="Photographs"><span class=main_glyph>&#128247;</span>Photography</a></li>
+		        <li><a class=mobile_menu_item href="contact.html" title="Contact me"><span class=main_glyph>&#9993;</span> Contact</a></li>
+          </ul>
+        </div>
       </div>
       <ul id=socialbar>
         <li id=linkedin>
@@ -77,7 +91,7 @@
     </header>
     <br>
     <div id=mtbanner class=gen_div>
-      <img id=small_mt_pic src="..\images\logos\mt_logo_small.png" alt="MT Logo xs" height=75 width=75>
+      <img id=small_mt_pic src="../images/logos/mt_logo_small.png" alt="MT Logo xs" height=75 width=75>
     </div>
     <div class=gen_div>
       <p class='gen_text justify med_text margin0'>

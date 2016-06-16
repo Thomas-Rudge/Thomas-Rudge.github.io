@@ -10,6 +10,7 @@
   <meta name="keywords" content="Thomas, Rudge, Edward, resume, cv, curriculum vitae, job">
   <!-- CSS & JS -->
   <link rel="stylesheet" href="../css/main.css">
+  <script type="text/javascript" src="../javascript/mobile_navigation.js" async></script>
   <!-- Icons-->
   <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png">
@@ -38,21 +39,34 @@
 <body id=bsoft>
   <div id=container>
     <header>
-      <a href="..\index.html" title="Home">
-        <img class=myphoto src="..\images\logos\me.png">
+      <a href="../index.html" title="Home">
+        <img class=myphoto src="../images/logos/me.png" alt='My head photo'>
       </a>
       <div id=headerdiv>
         <h1 class=myname>Thomas Rudge</h1>
-        <nav>
+        <nav id=mainnav>
 	       <ul class=navlist>
-            <li class=navli><a id=home_symbol href="..\index.html" title="Home">&#9978;</a></li>
-		      <li class=navli><a href="professional.html" title="Professional work experience">Professional &#9874;</a></li>
-		      <li class=navli><a id=selected_page title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography &#128247;</a></li>
-		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
+            <li class=navli><a id=home_symbol href="../index.html" title="Home"><span class=main_glyph>&#9978;</span></a></li>
+		      <li class=navli><a href="professional.html" title="Professional work experience">Professional <span class=main_glyph>&#9874;</span></a></li>
+		      <li class=navli><a id=selected_page title="Personal software projects">Software <span class=main_glyph>&#9000;</span></a></li>
+		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design <span class=main_glyph>&#9998;</span></a></li>
+		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography <span class=main_glyph>&#128247;</span></a></li>
+		      <li class=navli><a href="contact.html" title="Contact me">Contact <span class=main_glyph>&#9993;</span></a></li>
 	       </ul>
         </nav>
+        <div id=navmobile>
+        <a id=mobile_navlink onclick='toggleNavPane(1)'></a>
+        </div>
+        <div id=mobilelist>
+          <ul class=gen_text>
+            <li><a class=mobile_menu_item href="../index.html" title="Home"><span class=main_glyph>&#9978;</span> Home</li>
+            <li><a class=mobile_menu_item href="professional.html" title="Professional work experience"><span class=main_glyph>&#9874;</span> Professional</a></li>
+		        <li><a id=mobile_selected title="Personal software projects"><span class=main_glyph>&#9000;</span> Software</a></li>
+		        <li><a class=mobile_menu_item href="design.html" title="Design work"><span class=main_glyph>&#9998;</span> Design</a></li>
+		        <li><a class=mobile_menu_item href="photography.html" title="Photographs"><span class=main_glyph>&#128247;</span>Photography</a></li>
+		        <li><a class=mobile_menu_item href="contact.html" title="Contact me"><span class=main_glyph>&#9993;</span> Contact</a></li>
+          </ul>
+        </div>
       </div>
       <ul id=socialbar>
         <li id=linkedin>
@@ -80,11 +94,11 @@
       </p>
     </div>
     <hr>
-    <div class='gen_div margin70'>
-      <a href="http://neposservice.wix.com/nepos" title="Nepos Software" target="_blank">
-        <img class=genphoto src="..\images\logos\nepos_logo.png" alt="NEPOS Logo" width=150 height=185>
+    <div class='gen_div margin40 mobile_parent'>
+      <a href="http://neposservice.wix.com/nepos" title="Nepos Software" target="_blank" >
+        <img class='genphoto mobile_child img150' src="../images/logos/nepos_logo.png" alt="NEPOS Logo">
       </a>
-      <p class='gen_text justify med_text margin0'>
+      <p class='gen_text justify med_text mobile_child'>
       In late 2013, after a few lessons in programming, my brother in-law half jokingly said that his business was paying a lot 
       for its POS software, and whether I could make him a simple POS and cash management system to replace it. So I started researching 
       and playing around with Python, seeing the task more as a learning exercise rather than anything serious. But a year and a half later 
@@ -98,11 +112,11 @@
       </p>
     </div>
     <hr>
-    <div class='gen_div margin70'>
+    <div class='gen_div margin40 mobile_parent'>
       <a href="swift_page.html" title="MT940/50 Generator">
-        <img class=genphoto src="..\images\logos\mt_logo.png" alt="MT Logo" width=150 height=150>
+        <img class='genphoto mobile_child img150' src="../images/logos/mt_logo.png" alt="MT Logo">
       </a>
-      <p class='gen_text justify med_text margin0'>
+      <p class='gen_text justify med_text mobile_child'>
       One of my first jobs was as a System Administrator and a daily task was checking the banks swift messaging system for 
       the Vostro accounts, as well as incoming cash statements for the bank's main reconciliation system. I learnt a lot about swift 
       message structure and standards, and so it seemed only fitting that one of my first programs be a conversion script for such 
@@ -114,7 +128,7 @@
     <hr>
     <div class='gen_div fullwidth'>
       <p class='gen_text centred med_text'>
-      <span style="color: #4e6df0; font-weight: bold;">&#9978;</span> This website has its own <a class=normal_link href="https://github.com/Thomas-Rudge/personal-website" target="_blank">GitHub repo</a>, check it out.
+      <span style="color: #4e6df0; font-weight: bold;"><span class=main_glyph>&#9978;</span></span> This website has its own <a class=normal_link href="https://github.com/Thomas-Rudge/personal-website" target="_blank">GitHub repo</a>, check it out.
       </p>
     </div>
     <hr>

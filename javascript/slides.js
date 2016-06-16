@@ -150,6 +150,11 @@ var calcPosition = function(imgHeight, imgWidth) {
 var expandImageView = function(imageId) {
    // Get the width of the page
    var pageBody = document.getElementById(currentBody);
+   // If you couldn't get the page body, abort.
+   if (!pageBody) {
+      return;
+   }
+   
    var pageBodyHeight = window.innerHeight;
    var pageBodyWidth = pageBody.offsetWidth;
    var imageDiv = document.getElementById(imageId);
@@ -165,33 +170,19 @@ var expandImageView = function(imageId) {
    imageDiv.style.opacity = 1;
    // Set the objects new onclick method to collapse the image
    imageObj.onclick = function() {contractImageView(imageId);};
-   //
-   if (pageBodyHeight > 550 && pageBodyWidth > 778) {
-      // Calculate the margins.
-      var imageDivWidth = imageDiv.offsetWidth || imageDiv.clientWidth;
-      var imageDivHeight = imageDiv.offsetHeight || imageDiv.clientHeight;
-      var leftOffset = (pageBodyWidth - imageDivWidth) / 2;
-      var topOffset = (pageBodyHeight - imageDivHeight) /2;
-      // Adjust styling to make the div visible and centred.
-      imageDiv.style.left = String(leftOffset) + 'px';
-      imageDiv.style.top = String(topOffset) + 'px';
-   } else {
-      // This version will try to make the image as fullsreen as possible
-      // It is mostly intended for mobile phone devices.
-      imageObj.style.maxHeight = screen.height + 'px';
-      imageObj.style.maxWidth = screen.width  + 'px';
-      paraObj.style.display = 'none';
-      // Get the images dimensions and set its left/top values
-      var imageHeight = imageObj.offsetHeight || imageObj.clientHeight;
-      var imageWidth = imageObj.offsetWidth || imageObj.clientWidth;
-      imageObj.style.position = 'fixed';
-      imageObj.style.left = (Math.round((screen.width - imageWidth) / 2)).toString() + 'px';
-      imageObj.style.top = (Math.round((screen.height - imageHeight) / 2)).toString() + 'px';
-      // Don't show the navigation arrows
-      var blackDiv = document.getElementById("blackdiv");
-      blackDiv.children[0].style.display = 'none';
-      blackDiv.children[1].style.display = 'none';
-   }
+   // Calculate the right size
+   imageDiv.style.maxHeight = pageBodyHeight + 'px';
+   imageDiv.style.maxWidth = pageBodyWidth  + 'px';
+   imageObj.style.maxHeight = pageBodyHeight + 'px';
+   imageObj.style.maxWidth = pageBodyWidth  + 'px';
+   // Calculate the margins.
+   var imageDivWidth = imageDiv.offsetWidth || imageDiv.clientWidth;
+   var imageDivHeight = imageDiv.offsetHeight || imageDiv.clientHeight;
+   var leftOffset = (pageBodyWidth - imageDivWidth) / 2;
+   var topOffset = (pageBodyHeight - imageDivHeight) /2;
+   // Adjust styling to make the div visible and centred.
+   imageDiv.style.left = String(leftOffset) + 'px';
+   imageDiv.style.top = String(topOffset) + 'px';
    
    currentId = imageId;
    toggleBlackDiv();
@@ -200,20 +191,22 @@ var expandImageView = function(imageId) {
 
 var contractImageView = function(imageId) {
    var activeId = document.getElementById(imageId);
+   // Abort if you can't get the element
+   if (!activeId) {
+      return;
+   }
+   
    var activeImg = activeId.children[0];
    var activePara = activeId.children[1];
-   var blackDiv = document.getElementById("blackdiv");
    
   if (currentPage === 'DESIGN') {
       var standardClass = 'design_div';
    } else {
       var standardClass = 'photo_div';
    }
-   // Clean up if fullscreen (mobile) mode was used
-   blackDiv.children[0].style.display = 'block';
-   blackDiv.children[1].style.display = 'block';
-   activeImg.style = '';
-   activeId.style = '';
+   
+   activeImg.style.maxHeight = 'none';
+   activeImg.style.maxWidth = 'none';
    // Set the divs class to normal mode
    activeId.className = standardClass;
    // Reset images onclick function

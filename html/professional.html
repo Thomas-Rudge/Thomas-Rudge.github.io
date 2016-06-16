@@ -8,8 +8,10 @@
   <meta name="description" content="The resume of Thomas Rudge">
   <meta name="author" content="Thomas Rudge">
   <meta name="keywords" content="Thomas, Rudge, Edward, resume, cv, curriculum vitae, job">
-  <!-- Icons-->
+  <!-- CSS & JS -->
   <link rel="stylesheet" href="../css/main.css">
+  <script type="text/javascript" src="../javascript/mobile_navigation.js" async></script>
+  <!-- Icons-->
   <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-touch-icon-72x72.png">
@@ -37,21 +39,34 @@
 <body id=bprof>
   <div id=container>
     <header>
-      <a href="..\index.html" title="Home">
-        <img class=myphoto src="..\images\logos\me.png">
+      <a href="../index.html" title="Home">
+        <img class=myphoto src="../images/logos/me.png" alt='My head photo'>
       </a>
       <div id=headerdiv>
         <h1 class=myname>Thomas Rudge</h1>
-        <nav>
+        <nav id=mainnav>
 	       <ul class=navlist>
-            <li class=navli><a id=home_symbol href="..\index.html" title="Home">&#9978;</a></li>
-		      <li class=navli><a id=selected_page title="Professional work experience">Professional &#9874;</a></li>
-		      <li class=navli><a href="software.html" title="Personal software projects">Software &#9000;</a></li>
-		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design &#128393;</a></li>
-		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography &#128247;</a></li>
-		      <li class=navli><a href="contact.html" title="Contact me">Contact &#9993;</a></li>
+            <li class=navli><a id=home_symbol href="../index.html" title="Home"><span class=main_glyph>&#9978;</span></a></li>
+		      <li class=navli><a id=selected_page title="Professional work experience">Professional <span class=main_glyph>&#9874;</span></a></li>
+		      <li class=navli><a href="software.html" title="Personal software projects">Software <span class=main_glyph>&#9000;</span></a></li>
+		      <li class=navli><a href="design.html#DESIGN" title="Design work">Design <span class=main_glyph>&#9998;</span></a></li>
+		      <li class=navli><a href="photography.html#PHOTO" title="Photographs">Photography <span class=main_glyph>&#128247;</span></a></li>
+		      <li class=navli><a href="contact.html" title="Contact me">Contact <span class=main_glyph>&#9993;</span></a></li>
 	       </ul>
         </nav>
+        <div id=navmobile>
+        <a id=mobile_navlink onclick='toggleNavPane(1)'></a>
+        </div>
+        <div id=mobilelist>
+          <ul class=gen_text>
+            <li><a class=mobile_menu_item href="../index.html" title="Home"><span class=main_glyph>&#9978;</span> Home</li>
+            <li><a id=mobile_selected title="Professional work experience"><span class=main_glyph>&#9874;</span> Professional</a></li>
+		        <li><a class=mobile_menu_item href="software.html" title="Personal software projects"><span class=main_glyph>&#9000;</span> Software</a></li>
+		        <li><a class=mobile_menu_item href="design.html" title="Design work"><span class=main_glyph>&#9998;</span> Design</a></li>
+		        <li><a class=mobile_menu_item href="photography.html" title="Photographs"><span class=main_glyph>&#128247;</span>Photography</a></li>
+		        <li><a class=mobile_menu_item href="contact.html" title="Contact me"><span class=main_glyph>&#9993;</span> Contact</a></li>
+          </ul>
+        </div>
       </div>
       <ul id=socialbar>
         <li id=linkedin>
@@ -88,46 +103,46 @@
       <div id=skill_list class='gen_text margin40 no_top'>
         <ul>
           <li>
-            <img class=table_img src='..\images\logos\python.png'> Python
+            <img class=table_img src='../images/logos/python.png'> Python
           </li>
           <li>
-            <img class=table_img src='..\images\logos\javascript.png'> Javascript
+            <img class=table_img src='../images/logos/javascript.png'> Javascript
           </li>
           <li>
-            <img class=table_img src='..\images\logos\html.png'> HTML
+            <img class=table_img src='../images/logos/html.png'> HTML
           </li>
           <li>
-            <img class=table_img src='..\images\logos\css.png'> CSS
+            <img class=table_img src='../images/logos/css.png'> CSS
           </li>
           <li>
-            <img class=table_img src='..\images\logos\sql.png'> SQL
+            <img class=table_img src='../images/logos/sql.png'> SQL
           </li>
           <li>
-            <img class=table_img src='..\images\logos\vba.png'> VBA
+            <img class=table_img src='../images/logos/vba.png'> VBA
           </li>
           <li>
-            <img class=table_img src='..\images\logos\excel.png'> MS Excel
+            <img class=table_img src='../images/logos/excel.png'> MS Excel
           </li>
           <li>
-            <img class=table_img src='..\images\logos\access.png'> MS Access
+            <img class=table_img src='../images/logos/access.png'> MS Access
           </li>
           <li>
-            <img class=table_img src='..\images\logos\stl.png'> STL TLM
+            <img class=table_img src='../images/logos/stl.png'> STL TLM
           </li>
           <li>
-            <img class=table_img src='..\images\logos\testing.png'> UAT
+            <img class=table_img src='../images/logos/testing.png'> UAT
           </li>
           <li>
-            <img class=table_img src='..\images\logos\optimise.png'> Optimisation
+            <img class=table_img src='../images/logos/optimise.png'> Optimisation
           </li>
           <li>
-            <img class=table_img src='..\images\logos\problem.png'> Problem Solving
+            <img class=table_img src='../images/logos/problem.png'> Problem Solving
           </li>
           <li>
-            <img class=table_img src='..\images\logos\risk.png'> Risk Analysis
+            <img class=table_img src='../images/logos/risk.png'> Risk Analysis
           </li>
           <li>
-            <img class=table_img src='..\images\logos\analysis.png'> Operations Analysis
+            <img class=table_img src='../images/logos/analysis.png'> Operations Analysis
           </li>
         </ul>
       </div>
@@ -135,50 +150,50 @@
         <table class='standard_table nodecoration margin70 right_txt no_top'>
           <tr>
             <td>
-            Python <img class=table_img src='..\images\logos\python.png'>
+            Python <img class=table_img src='../images/logos/python.png'>
             </td>
             <td>
-            Javascript <img class=table_img src='..\images\logos\javascript.png'>
+            Javascript <img class=table_img src='../images/logos/javascript.png'>
             </td>
             <td>
-            HTML <img class=table_img src='..\images\logos\html.png'>
+            HTML <img class=table_img src='../images/logos/html.png'>
             </td>
             <td>
-            CSS <img class=table_img src='..\images\logos\css.png'>
+            CSS <img class=table_img src='../images/logos/css.png'>
             </td>
             <td>
-            SQL <img class=table_img src='..\images\logos\sql.png'>
-            </td>
-          </tr>
-          <tr>
-            <td>
-            VBA <img class=table_img src='..\images\logos\vba.png'>
-            </td>
-            <td>
-            MS Excel <img class=table_img src='..\images\logos\excel.png'>
-            </td>
-            <td>
-            MS Access <img class=table_img src='..\images\logos\access.png'>
-            </td>
-            <td>
-            STL TLM <img class=table_img src='..\images\logos\stl.png'>
-            </td>
-            <td>
-            UAT <img class=table_img src='..\images\logos\testing.png'>
+            SQL <img class=table_img src='../images/logos/sql.png'>
             </td>
           </tr>
           <tr>
             <td>
-            Optimisation <img class=table_img src='..\images\logos\optimise.png'>
+            VBA <img class=table_img src='../images/logos/vba.png'>
             </td>
             <td>
-            <span class=small_text>Problem Solving</span> <img class=table_img src='..\images\logos\problem.png'>
+            MS Excel <img class=table_img src='../images/logos/excel.png'>
             </td>
             <td>
-            <span class=small_text>Risk Analysis</span> <img class=table_img src='..\images\logos\risk.png'>
+            MS Access <img class=table_img src='../images/logos/access.png'>
+            </td>
+            <td>
+            STL TLM <img class=table_img src='../images/logos/stl.png'>
+            </td>
+            <td>
+            UAT <img class=table_img src='../images/logos/testing.png'>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            Optimisation <img class=table_img src='../images/logos/optimise.png'>
+            </td>
+            <td>
+            <span class=small_text>Problem Solving</span> <img class=table_img src='../images/logos/problem.png'>
+            </td>
+            <td>
+            <span class=small_text>Risk Analysis</span> <img class=table_img src='../images/logos/risk.png'>
             </td>
             <td colspan=2>
-            Operations Analysis <img class=table_img src='..\images\logos\analysis.png'>
+            Operations Analysis <img class=table_img src='../images/logos/analysis.png'>
             </td>
             <td>
             </td>
@@ -520,7 +535,7 @@
     <br>
     <footer class=relative_footer>
     &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by copyright.<br>
-    Site not working properly? &#128534; <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
+    Site not working properly? <span class=main_glyph>&#128534;</span> <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
     </footer>
   </div>
 </body>
