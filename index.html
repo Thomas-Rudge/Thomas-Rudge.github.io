@@ -34,10 +34,17 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <!--[if IE]>
+  <style type="text/css">
+  #intro_svg {
+    display: none;
+  }
+  </style>
+  <![endif]-->
 </head>
 
-<body id=bhome style='height:100%;'>
-  <div id=container style='height:100%;'>
+<body id=bhome>
+  <div id=container>
     <header>
       <img class=myphoto src="images/logos/me.png" alt='My head photo'>
       <div id=headerdiv>
@@ -85,17 +92,27 @@
         </li>
       </ul>
     </header>
-    <div class=gen_div>
-    <p class='gen_text med_text margin40'>
-    <span class='gen_title title_text'>Hello...</span><br>
-    ...Thomas is originally from the UK. He spent 7 years working with Barclays Corporate and Investment Bank as a Business Analyst and Technical 
-    Subject Matter Expert. His main role involved sitting on the management team of Barclays Reconciliation Services Utility, and helping to manage 
-    the departments IT systems and global operations. Since moving to India he has written and released his own business cash management software, 
-    and has worked closely with a local microfinance company on a number of small projects. In his free time he volunteers at a local school teaching 
-    English and Computer Skills. 
+    <svg id=intro_svg viewBox="0 0 990 500" preserveAspectRatio="xMidYMid meet"'>
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#01a2ff;stop-opacity:1" />
+          <stop offset="100%" style="stop-coloR:#000000;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <text fill="url(#grad1)" class='gen_text big_text margin40 justify' x="0" y="0">
+    <tspan x='70' y='30'>Hello...</tspan>
+    <tspan x='70' y='60'>my name is Thomas. </tspan>
+    <tspan x='70' y='90'>I eat green eggs and ham yo.</tspan>
+    </text>
+    </svg>
+    <div id=intro_text class=gen_div>
+    <span class='gen_text gen_title big_text margin40 no_bottom'>Hello...</span>
+    <p class='gen_text big_text gradient_text margin40 justify no_top'>
+    ...my name is Thomas. I have a fairly long and varied history, but if there is one thing that ties it all together, it’s a desire for the novel combined with a strong ability to assimilate complex ideas quickly and effectively. I’m a Business Analyst, Process Expert and Administrator, self-taught Software Developer, Graphic Designer, and Photographer, who is currently dabbling in Web Design. Welcome to my site. 
     </p>
     </div>
-    <footer id=index_footer>
+    <br><br><br>
+    <footer id=relative_footer>
     &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by copyright.<br>
     Site not working properly? <span class=main_glyph>&#128534;</span> <a href="mailto:thomas.rudge85@gmail.com?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
     </footer>
