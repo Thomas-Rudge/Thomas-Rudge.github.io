@@ -26,13 +26,13 @@
 }
 
 @font-face {
-	font-family: 'GlyphSubSet';
-	src: url('../fonts/GlyphSubSet.eot');
-	src: url('../fonts/GlyphSubSet.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/GlyphSubSet.woff2') format('woff2'),
-		url('../fonts/GlyphSubSet.woff') format('woff'),
-		url('../fonts/GlyphSubSet.ttf') format('truetype'),
-		url('../fonts/GlyphSubSet.svg#GlyphSubSet') format('svg');
+	font-family: 'glyphsubset';
+	src: url('../fonts/glyphsubset.eot');
+	src: url('../fonts/glyphsubset.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/glyphsubset.woff2') format('woff2'),
+		url('../fonts/glyphsubset.woff') format('woff'),
+		url('../fonts/glyphsubset.ttf') format('truetype'),
+		url('../fonts/glyphsubset.svg#glyphsubset') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -845,7 +845,7 @@ nav a:hover {
 }
 
 .main_glyph {
-  font-family: GlyphSubSet;
+  font-family: glyphsubset, 'Segoe UI Symbol';
 }
   
 .margin0 {
