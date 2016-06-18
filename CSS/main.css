@@ -192,6 +192,9 @@
 }
 
 @media screen and (max-width: 520px) {
+  .big_text {
+    font-size: 25px !important;
+  }
   #headerdiv {
     position: static !important;
   }
@@ -243,6 +246,24 @@
   }
 }
 
+/* Replace SVG with gradiated text for webkit devices*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #intro_svg {
+    display: none !important;
+  }
+  #intro_text {
+    display: block !important;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #intro_svg {
+    display: none !important;
+  }
+  #intro_text {
+    display: block !important;
+  }
+}
 /* iPhones and iPads can't handle the layout on the software page.
 
   iPhone 4 variations*/
@@ -532,7 +553,13 @@ nav a:hover {
 .decorated_colour tr:nth-child(even) {
   background-color: #cbe4f2;
   }
-  
+
+.gradient_text {
+  background: -webkit-linear-gradient(#01a2ff, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gen_text {
   font-family: questrialregular, arial, "sans-serif";
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -541,6 +568,12 @@ nav a:hover {
   display: block;
   box-sizing: border-box;
   left: 0;
+}
+
+.big_text {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: justify;
 }
 
 .title_text {
@@ -850,6 +883,20 @@ nav a:hover {
   font-size: 14px;
   background-color: #fff568;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+#intro_svg {
+  padding-top: 40px;
+  width: 95%;
+}
+
+#intro_text {
+  display: none;
+}
+
+#intro_text span {
+  font-weight: 40px;
+  color: #01a2ff;
 }
 
 #index_footer {
