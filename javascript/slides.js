@@ -228,7 +228,6 @@ var onLoadActivities = function() {
       rotatePhotoBanner();
       
       var containDiv = document.getElementById('container');
-      containDiv.style.backgroundColor = '#131313';
       containDiv.style.boxShadow = '1px 0px 40px black';
    }
 };

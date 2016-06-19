@@ -437,38 +437,29 @@ nav {
 }
 
 nav a {
-  font-family: questrialregular, arial, "sans-serif";
-  font-size: 19px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1;
-  padding: 5px 10px 5px 10px;
-  margin: 0px 3px 3px 3px;
-  border-top: 0px;
-  border-right: 0px;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-color: white;
-  border-style: solid;
+  padding: 0px;
+  margin: 0px;
+  height: 39px;
+  border: 0px;
   display: block;
   box-sizing: border-box;
   background-color: transparent;
-  color: #404040;
-  transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
 }
 
 nav a:hover {
   cursor: pointer;
-  color: white;
-  background-color: #404040;
-  transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  content: <span class=main_glyph>&#9874;</span>
 }
    
 .navli {
   display: inline-block;
+  height: 39px;
+  margin: 0px 1px 0px 1px;
+  text-decoration: none;  
+}
+
+.navli a {
+  font-size: 0;
+  text-decoration: none;
 }
 	
 .navlist {
@@ -844,8 +835,8 @@ nav a:hover {
   width: 100%;
 }
 
-.main_glyph {
-  font-family: glyphsubset, 'Segoe UI Symbol';
+.navlink {
+  font-size: 0px;
 }
   
 .margin0 {
@@ -882,6 +873,7 @@ nav a:hover {
   box-sizing: border-box;
   font-size: 14px;
   background-color: #fff568;
+  color: black;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
@@ -956,7 +948,7 @@ nav a:hover {
   width: 1130px;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  background-color: inherit;
   box-shadow: 1px 0px 40px #262626;
   display: block;
 }
@@ -1089,26 +1081,32 @@ nav a:hover {
 /* Body background images*/
 #bhome {
   background-image: url("../images/bg/bgtile.png");
+  background-color: white;
 }
 
 #bprof {
   background-image: url("../images/bg/protile.png");
+  background-color: white;
 }
 
 #bsoft {
   background-image: url("../images/bg/softile.png");
+  background-color: white;
 }
   
 #bdesign {
   background-image: url("../images/bg/destile.png");
+  background-color: white;
 }
   
 #bphoto {
   background-image: url("../images/bg/photile.png");
+  background-color: #131313;  
 }
   
 #bcont {
   background-image: url("../images/bg/contile.png");
+  background-color: white;
 }
 
 /* Sprites */
@@ -1128,67 +1126,280 @@ nav a:hover {
 }
 
 #linkedin {
-  background: url("../images/sprites/small_icons.gif") 0px -21px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 0px -21px;
 }
 
 #linkedin:hover {
-  background: url("../images/sprites/small_icons.gif") 20px -21px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 20px -21px;
 }
 
 #facebook {
-  background: url("../images/sprites/small_icons.gif") 0px -42px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 0px -42px;
 }
 
 #facebook:hover {
-  background: url("../images/sprites/small_icons.gif") 20px -42px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 20px -42px;
 }
 
 #github {
-  background: url("../images/sprites/small_icons.gif") 0px 0px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 0px 0px;
 }
 
 #github:hover {
-  background: url("../images/sprites/small_icons.gif") 20px 0px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 20px 0px;
 }
 
 #emailme {
-  background: url("../images/sprites/small_icons.gif") 0px -63px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 0px -63px;
 }
 
 #emailme:hover {
-  background: url("../images/sprites/small_icons.gif") 20px -63px;
+  background: url("../images/sprites/small_icons.gif") no-repeat 20px -63px;
 }
 
 #linkedin_dark {
-  background: url("../images/sprites/small_icons_dark.gif") 0px -21px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px -21px;
 }
 
 #linkedin_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") 20px -21px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px -21px;
 }
 
 #facebook_dark {
-  background: url("../images/sprites/small_icons_dark.gif") 0px -42px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px -42px;
 }
 
 #facebook_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") 20px -42px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px -42px;
 }
 
 #github_dark {
-  background: url("../images/sprites/small_icons_dark.gif") 0px 0px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px 0px;
 }
 
 #github_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") 20px 0px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px 0px;
 }
 
 #emailme_dark {
-  background: url("../images/sprites/small_icons_dark.gif") 0px -63px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px -63px;
 }
 
 #emailme_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") 20px -63px;
+  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px -63px;
+}
+
+/* Navigation Sprites */
+#navlihome {
+  width: 48px;
+  background: url("../images/sprites/navsprites.png") no-repeat 0px 0px;
+}
+#navlihome_selected {
+  width: 48px;
+  background: url("../images/sprites/navsprites.png") no-repeat 0px -39px;
+}
+#navliprof {
+  width: 152px;
+  background: url("../images/sprites/navsprites.png") no-repeat -48px 0px;
+}
+#navliprof_selected {
+  width: 152px;
+  background: url("../images/sprites/navsprites.png") no-repeat -48px -39px;
+}
+#navlisoft {
+  width: 128px;
+  height: 39px;
+  background: url("../images/sprites/navsprites.png") no-repeat -200px 0px;
+}
+#navlisoft_selected {
+  width: 128px;
+  height: 39px;
+  background: url("../images/sprites/navsprites.png") no-repeat -200px -39px;
+}
+#navlidesign {
+  width: 108px;
+  background: url("../images/sprites/navsprites.png") no-repeat -328px 0px;
+}
+#navlidesign_selected {
+  width: 108px;
+  background: url("../images/sprites/navsprites.png") no-repeat -328px -39px;
+}
+#navliphoto {
+  width: 159px;
+  background: url("../images/sprites/navsprites.png") no-repeat -436px 0px;
+}
+#navliphoto_selected {
+  width: 159px;
+  background: url("../images/sprites/navsprites.png") no-repeat -436px -39px;
+}
+#navlicontact {
+  width: 117px;
+  background: url("../images/sprites/navsprites.png") no-repeat -595px 0px;
+}
+#navlicontact_selected {
+  width: 117px;
+  background: url("../images/sprites/navsprites.png") no-repeat -595px -39px;
+}
+/* BLACK */
+#navlihome_black {
+  width: 48px;
+  background: url("../images/sprites/navsprites.png") no-repeat 0px -156px;
+}
+#navliprof_black {
+  width: 152px;
+  background: url("../images/sprites/navsprites.png") no-repeat -48px -156px;
+}
+#navlisoft_black {
+  width: 128px;
+  height: 39px;
+  background: url("../images/sprites/navsprites.png") no-repeat -200px -156px;
+}
+#navlidesign_black {
+  width: 108px;
+  background: url("../images/sprites/navsprites.png") no-repeat -328px -156px;
+}
+#navlicontact_black {
+  width: 117px;
+  background: url("../images/sprites/navsprites.png") no-repeat -595px -156px;
+}
+/* HOME */
+#home {
+  background: url("../images/sprites/navsprites.png") no-repeat 0px -78px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#home:hover {
+  opacity: 1;
+}
+#home_selected {
+  background: url("../images/sprites/navsprites.png") no-repeat 0px -117px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#home_selected:hover {
+  opacity: 1;
+}
+/* PROFESSIONAL */
+#prof {
+  background: url("../images/sprites/navsprites.png") no-repeat -48px -78px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#prof:hover {
+  opacity: 1;
+}
+#prof_selected {
+  background: url("../images/sprites/navsprites.png") no-repeat -48px -117px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#prof_selected:hover {
+  opacity: 1;
+  ;
+}
+/* SOFTWARE */
+#soft {
+  background: url("../images/sprites/navsprites.png") no-repeat -200px -78px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#soft:hover {
+  opacity: 1;
+}
+#soft_selected {
+  background: url("../images/sprites/navsprites.png") no-repeat -200px -117px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#soft_selected:hover {
+  opacity: 1;
+}
+/* DESIGN */
+#dsgn {
+  background: url("../images/sprites/navsprites.png") no-repeat -328px -78px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#dsgn:hover {
+  opacity: 1;
+}
+#dsgn_selected {
+  background: url("../images/sprites/navsprites.png") no-repeat -328px -117px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#dsgn_selected:hover {
+  opacity: 1;
+}
+/* PHOTOGRAPHY */
+#phtgph {
+  background: url("../images/sprites/navsprites.png") no-repeat -436px -78px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#phtgph:hover {
+  opacity: 1;
+}
+#phtgph_selected {
+  background: url("../images/sprites/navsprites.png") no-repeat -436px -117px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#phtgph_selected:hover {
+  opacity: 1;
+}
+/* CONTACT */
+#cntct {
+  background: url("../images/sprites/navsprites.png") no-repeat -595px -78px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#cntct:hover {
+  opacity: 1;
+}
+#cntct_selected {
+  background: url("../images/sprites/navsprites.png") no-repeat -595px -117px;
+  -webkit-transition: opacity 0.7s;
+	-moz-transition:    opacity 0.7s;
+	-o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 0;
+}
+#cntct_selected:hover {
+  opacity: 1;
 }
 
 /* Contacts Sprites */
@@ -1208,17 +1419,17 @@ nav a:hover {
 }
 
 #emailme_big {
-  background: url("../images/sprites/big_icons.gif") 0px 0px;
+  background: url("../images/sprites/big_icons.gif") no-repeat 0px 0px;
 }
 
 #emailme_big:hover {
-  background: url("../images/sprites/big_icons.gif") 0 -81px;
+  background: url("../images/sprites/big_icons.gif") no-repeat 0 -81px;
 }
 
 #linkedin_big {
-  background: url("../images/sprites/big_icons.gif") 0px -162px;
+  background: url("../images/sprites/big_icons.gif") no-repeat 0px -162px;
 }
 
 #linkedin_big:hover {
-  background: url("../images/sprites/big_icons.gif") 0 -243px;
+  background: url("../images/sprites/big_icons.gif") no-repeat 0 -243px;
 }
