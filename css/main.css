@@ -231,6 +231,12 @@
   .genphoto {
     margin: 20px 0px 4px 10px !important;
   }
+  #intro_svg {
+    display: none !important;
+  }
+  #intro_text {
+    display: block !important;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -549,6 +555,7 @@ nav a:hover {
   background: -webkit-linear-gradient(#01a2ff, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #292929; /* For IE, because it sucks */
 }
 
 .gen_text {
@@ -1130,67 +1137,67 @@ nav a:hover {
 }
 
 #linkedin {
-  background: url("../images/sprites/small_icons.gif") no-repeat 0px -21px;
+  background: url("../images/sprites/small_icons.gif") 0px -21px;
 }
 
 #linkedin:hover {
-  background: url("../images/sprites/small_icons.gif") no-repeat 20px -21px;
+  background: url("../images/sprites/small_icons.gif") 20px -21px;
 }
 
 #facebook {
-  background: url("../images/sprites/small_icons.gif") no-repeat 0px -42px;
+  background: url("../images/sprites/small_icons.gif") 0px -42px;
 }
 
 #facebook:hover {
-  background: url("../images/sprites/small_icons.gif") no-repeat 20px -42px;
+  background: url("../images/sprites/small_icons.gif") 20px -42px;
 }
 
 #github {
-  background: url("../images/sprites/small_icons.gif") no-repeat 0px 0px;
+  background: url("../images/sprites/small_icons.gif") 0px 0px;
 }
 
 #github:hover {
-  background: url("../images/sprites/small_icons.gif") no-repeat 20px 0px;
+  background: url("../images/sprites/small_icons.gif") 20px 0px;
 }
 
 #emailme {
-  background: url("../images/sprites/small_icons.gif") no-repeat 0px -63px;
+  background: url("../images/sprites/small_icons.gif") 0px -63px;
 }
 
 #emailme:hover {
-  background: url("../images/sprites/small_icons.gif") no-repeat 20px -63px;
+  background: url("../images/sprites/small_icons.gif") 20px -63px;
 }
 
 #linkedin_dark {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px -21px;
+  background: url("../images/sprites/small_icons_dark.gif") 0px -21px;
 }
 
 #linkedin_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px -21px;
+  background: url("../images/sprites/small_icons_dark.gif") 20px -21px;
 }
 
 #facebook_dark {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px -42px;
+  background: url("../images/sprites/small_icons_dark.gif") 0px -42px;
 }
 
 #facebook_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px -42px;
+  background: url("../images/sprites/small_icons_dark.gif") 20px -42px;
 }
 
 #github_dark {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px 0px;
+  background: url("../images/sprites/small_icons_dark.gif") 0px 0px;
 }
 
 #github_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px 0px;
+  background: url("../images/sprites/small_icons_dark.gif") 20px 0px;
 }
 
 #emailme_dark {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 0px -63px;
+  background: url("../images/sprites/small_icons_dark.gif") 0px -63px;
 }
 
 #emailme_dark:hover {
-  background: url("../images/sprites/small_icons_dark.gif") no-repeat 20px -63px;
+  background: url("../images/sprites/small_icons_dark.gif") 20px -63px;
 }
 
 /* Navigation Sprites */
