@@ -870,6 +870,10 @@ nav a:hover {
   color: #1d43f0;
 }
 
+.blue_text {
+  color: #004f7d;
+}
+
 #empty {
   /*Don't put anything here*/
 }
