@@ -26,15 +26,15 @@
 }
 
 @font-face {
-	font-family: 'glyphsubset';
-	src: url('../fonts/glyphsubset.eot');
-	src: url('../fonts/glyphsubset.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/glyphsubset.woff2') format('woff2'),
-		url('../fonts/glyphsubset.woff') format('woff'),
-		url('../fonts/glyphsubset.ttf') format('truetype'),
-		url('../fonts/glyphsubset.svg#glyphsubset') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'glyphsubset';
+  src: url('../fonts/glyphsubset.eot');
+  src: url('../fonts/glyphsubset.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/glyphsubset.woff2') format('woff2'),
+       url('../fonts/glyphsubset.woff') format('woff'),
+       url('../fonts/glyphsubset.ttf') format('truetype'),
+       url('../fonts/glyphsubset.svg#glyphsubset') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
   
 /*Responsive design bit*/
@@ -467,7 +467,7 @@ nav a:hover {
   font-size: 0;
   text-decoration: none;
 }
-	
+  
 .navlist {
   list-style: none;
   display: inline-block;
@@ -1281,8 +1281,8 @@ nav a:hover {
 #home {
   background: url("../images/sprites/navsprites.png") no-repeat 0px -78px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1292,8 +1292,8 @@ nav a:hover {
 #home_selected {
   background: url("../images/sprites/navsprites.png") no-repeat 0px -117px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1304,8 +1304,8 @@ nav a:hover {
 #prof {
   background: url("../images/sprites/navsprites.png") no-repeat -48px -78px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1315,8 +1315,8 @@ nav a:hover {
 #prof_selected {
   background: url("../images/sprites/navsprites.png") no-repeat -48px -117px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1328,8 +1328,8 @@ nav a:hover {
 #soft {
   background: url("../images/sprites/navsprites.png") no-repeat -200px -78px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1339,8 +1339,8 @@ nav a:hover {
 #soft_selected {
   background: url("../images/sprites/navsprites.png") no-repeat -200px -117px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1351,8 +1351,8 @@ nav a:hover {
 #dsgn {
   background: url("../images/sprites/navsprites.png") no-repeat -328px -78px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1362,8 +1362,8 @@ nav a:hover {
 #dsgn_selected {
   background: url("../images/sprites/navsprites.png") no-repeat -328px -117px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1374,8 +1374,8 @@ nav a:hover {
 #phtgph {
   background: url("../images/sprites/navsprites.png") no-repeat -436px -78px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1385,8 +1385,8 @@ nav a:hover {
 #phtgph_selected {
   background: url("../images/sprites/navsprites.png") no-repeat -436px -117px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1397,8 +1397,8 @@ nav a:hover {
 #cntct {
   background: url("../images/sprites/navsprites.png") no-repeat -595px -78px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
@@ -1408,8 +1408,8 @@ nav a:hover {
 #cntct_selected {
   background: url("../images/sprites/navsprites.png") no-repeat -595px -117px;
   -webkit-transition: opacity 0.7s;
-	-moz-transition:    opacity 0.7s;
-	-o-transition:      opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
   transition:         opacity 0.7s;
   opacity: 0;
 }
