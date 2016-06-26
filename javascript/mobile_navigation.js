@@ -19,3 +19,22 @@ var toggleNavPane = function(level) {
       navButton.style.background = bgImg + ' 70px 0px';
    }
 };
+
+// This function hides the nav menu
+var hideOnResize = function() {
+   var navPane = document.getElementById('mobilelist');
+   var bodyEle = document.body;
+   console.log(bodyEle.id);
+   if (!navPane) {
+      return;
+   } else if (navPane.style.display === 'block') {
+      if (bodyEle.id = 'bhome') {
+        toggleNavPane(0);
+      } else {
+        toggleNavPane(1);
+      }
+   }
+};
+
+
+window.onresize = function() {hideOnResize()};
