@@ -1,7 +1,9 @@
 
-var currentId;   // Toggles a fullscreen translucent black div
-var currentPage; // Allows adjustment in slideshow behaviour (Design/Photo)
-var currentBody;
+var currentId;     // Toggles a fullscreen translucent black div
+var currentPage;   // Allows adjustment in slideshow behaviour (Design/Photo)
+var currentBody;   // Used to determine whether the active page is Photgraphy or Design
+var photoLazyData; // Used to store and load image source information when needed.
+var designLazyData;// Used to store and load image source information when needed.
 
 // Respond to keyboard input
 document.onkeydown = function(event) {
@@ -48,7 +50,7 @@ document.onkeydown = function(event) {
    event.preventDefault();
 };
 
-
+// Sets the mood.
 var toggleBlackDiv = function() {
    var ele = document.getElementById("blackdiv");
 
@@ -83,7 +85,6 @@ var rotatePhotoBanner = function() {
    ele.src = imgSrc;   
 };
 
-
 // A function to pad out a string with a given character in either right or left direction
 // padText = A string, padChar = A single character as a string, padLength = integer, padDirection = 'r' || 'l'
 var paddify = function(padText, padChar, padLength, padDirection) {
@@ -93,10 +94,8 @@ var paddify = function(padText, padChar, padLength, padDirection) {
    
    if (padDirection === 'l') {
       return padText + Array(padLength - padText.length + 1).join(padChar)
-      //return padText + padChar.repeat(padLength - padText.length); Not supported by IE
    } else {
       return Array(padLength - padText.length + 1).join(padChar) + padText
-      //return padChar.repeat(padLength - padText.length) + padText; Not supported by IE
    }   
 };
 
@@ -109,7 +108,7 @@ var hideBlackDiv = function() {
    ele.style.opacity = 0;
 };
 
-// Move the slideshow in a direction
+// Move the slideshow in a direction (-1 = previous, 1 = next)
 var imageToggle = function(direction) {
    if (currentPage === 'DESIGN') {
       var validIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
@@ -135,20 +134,34 @@ var imageToggle = function(direction) {
    nextImageInt = divName + paddify(nextImageInt.toString(), '0', 2, 'r');
    
    contractImageView(currentId);
+   validateImageSource(nextImageInt);
    expandImageView(nextImageInt);
 };
 
 
-var calcPosition = function(imgHeight, imgWidth) {
-  // Takes an images height and width and returns the top/left values 
-  // that will centre it on screen, while maintaining aspect ratio
-  var screenHeight = screen.height;
-  var screenWidth = screen.width;
+var validateImageSource = function(imgId) {
+   var imgDiv = document.getElementById(imgId);
+   var imgObj = imgDiv.children[0];
+   // This will ensure the right data is used for the page
+   if (currentPage === 'PHOTO') {
+      var lazyData = photoLazyData;
+   } else {
+      var lazyData = designLazyData;
+   }
+   
+   // Check whether the image has been loaded yet, and load if needed
+   if (imgObj.src.indexOf('lazy_placeholder.gif') !== -1) {
+      for (item in lazyData) {
+         if (item === imgDiv.parentElement.id) {
+            imgObj.src = lazyData[item][imgDiv.id];
+         }
+      }
+   }
 };
 
 
 var expandImageView = function(imageId) {
-   // Get the width of the page
+   // Get the page dimensions
    var pageBody = document.getElementById(currentBody);
    // If you couldn't get the page body, abort.
    if (!pageBody) {
@@ -159,52 +172,50 @@ var expandImageView = function(imageId) {
    var pageBodyWidth = pageBody.offsetWidth;
    var imageDiv = document.getElementById(imageId);
    var imageObj = imageDiv.children[0];
-   var paraObj = imageDiv.children[1];
    // If you can't get the div or its image, then abort.
    if (!imageDiv || !imageObj) {
       return;
-   }   
-   // Change the images class.
+   }
+   
+   // Change the image div's class which will bring it into full view.
    imageDiv.className = 'active_design_div';
    imageDiv.style.visibility = 'visible';
    imageDiv.style.opacity = 1;
    // Set the objects new onclick method to collapse the image
    imageObj.onclick = function() {contractImageView(imageId);};
-   // Calculate the right size
+   // Set image limitations so that it doesn't exceed screen-size
    imageDiv.style.maxHeight = pageBodyHeight + 'px';
    imageDiv.style.maxWidth = pageBodyWidth  + 'px';
    imageObj.style.maxHeight = pageBodyHeight + 'px';
    imageObj.style.maxWidth = pageBodyWidth  + 'px';
-   // Calculate the margins.
-   var imageDivWidth = imageDiv.offsetWidth || imageDiv.clientWidth;
-   var imageDivHeight = imageDiv.offsetHeight || imageDiv.clientHeight;
-   var leftOffset = (pageBodyWidth - imageDivWidth) / 2;
-   var topOffset = (pageBodyHeight - imageDivHeight) /2;
-   // Adjust styling to make the div visible and centred.
-   imageDiv.style.left = String(leftOffset) + 'px';
-   imageDiv.style.top = String(topOffset) + 'px';
-   
+   // Adjust styling to make the div centred.
+   imageDiv.style.left = '50%'; //String(leftOffset) + 'px';
+   imageDiv.style.top = '50%'; //String(topOffset) + 'px';
+   imageDiv.style.transform = 'translate(-50%, -50%)';
+   // Set the ID of the currently active image and dim the lights.
    currentId = imageId;
    toggleBlackDiv();
 };
 
 
 var contractImageView = function(imageId) {
+   console.log('ContractID ' + imageId);
    var activeId = document.getElementById(imageId);
    // Abort if you can't get the element
    if (!activeId) {
       return;
+   } else {
+      activeId.style = '';
    }
    
    var activeImg = activeId.children[0];
-   var activePara = activeId.children[1];
-   
-  if (currentPage === 'DESIGN') {
+   // Change the div back to its original class
+   if (currentPage === 'DESIGN') {
       var standardClass = 'design_div';
    } else {
-      var standardClass = 'photo_div';
+      var standardClass = 'photo_div photo_div_active';
    }
-   
+   // This will make the images size properly in their standard state
    activeImg.style.maxHeight = 'none';
    activeImg.style.maxWidth = 'none';
    // Set the divs class to normal mode
@@ -215,13 +226,76 @@ var contractImageView = function(imageId) {
    toggleBlackDiv();
 };
 
+// Returns true if element is in view, or has been scrolled past, else returns false.
+var elementIntoView = function(eleId) {
+   var ele = document.getElementById(eleId);
+   var viewHeight = window.innerHeight;
+   if (!ele) {
+      return;
+   }
+   
+   var eleRect = ele.getBoundingClientRect();
+   
+   if (eleRect.top <= viewHeight) {
+      return true;
+   } else {
+      return false;
+   }
+};
+
+// This function loads images as they come into view
+var lazyLoadContent = function() {
+   if (currentPage === 'PHOTO') {
+      var lazyData = photoLazyData;
+      var classValue = 'photo_div photo_div_active';
+   } else {
+      var lazyData = designLazyData;
+      var classValue = 'design_div'
+   }
+   
+   for (divItem in lazyData) {
+      var lastChild = document.getElementById(divItem).children.length - 1
+      if (elementIntoView(divItem) &&
+         document.getElementById(divItem).children[lastChild].children[0].src.indexOf('lazy_placeholder.gif') !== -1) {
+         for (subItem in lazyData[divItem]) {
+            var imageEle = document.getElementById(subItem);
+            if (!imageEle) {
+               return;
+            }
+
+            imageEle.children[0].src = lazyData[divItem][subItem];
+            imageEle.className = classValue;
+         }
+      }
+   }
+};
+
+
 var onLoadActivities = function() {
+   // Hide the noscript div
    var ele = document.getElementById('noscript');
    ele.style.display = 'none';
-   
+   // Set globals depending on the page
    if (document.getElementById('DESIGN')) {
       currentPage = 'DESIGN';
       currentBody = 'bdesign';
+      // This will be used to lazy load design images
+      designLazyData = {
+      'rc1':{'dimg07' : '../images/design/5katalyst2.png',
+             'dimg08' : '../images/design/5katalyst3.png',
+             'dimg09' : '../images/design/5katalyst4.png'},
+      'rc2':{'dimg10' : '../images/design/nepos.png',
+             'dimg11' : '../images/design/nepos_splash.png'},
+      'rc3':{'dimg12' : '../images/design/GSLL1.png',
+             'dimg13' : '../images/design/GSLL2.png',
+             'dimg14' : '../images/design/GSLR.png'},
+      'rc4':{'dimg15' : '../images/design/obsidian_dir.png',
+             'dimg16' : '../images/design/obsidian_event.png',
+             'dimg17' : '../images/design/EA1.png',
+             'dimg18' : '../images/design/EA2.png',
+             'dimg19' : '../images/design/EA3.png'}
+      };
+      
    } else {
       currentPage = 'PHOTO';
       currentBody = 'bphoto';
@@ -229,10 +303,78 @@ var onLoadActivities = function() {
       
       var containDiv = document.getElementById('container');
       containDiv.style.boxShadow = '1px 0px 40px black';
+      // This will be used to lazy load photo images
+      photoLazyData = {
+      'rc1': null,
+      'rc2': null,
+      'rc3': null,
+      'rc4': null,
+      'rc5': null,
+      'rc6': null,
+      'rc7': null,
+      'rc8': null,
+      'rc9': null,
+      'rc10': null,
+      'rc11': null,
+      'rc12': null,
+      'rc13': null,
+      'rc14': null,
+      'rc15': null,
+      'rc16': null,
+      };
+     
+      var imgDir = '../images/photography/photo'
+      var i = 7;
+     
+      for (itemId in photoLazyData) {
+          photoLazyData[itemId] = {['pimg' + paddify(i.toString(), '0', 2, 'r')]    : imgDir + paddify(i.toString(),     '0', 2, 'r') + '.jpg',
+                                   ['pimg' + paddify((i+1).toString(), '0', 2, 'r')]: imgDir + paddify((i+1).toString(), '0', 2, 'r') + '.jpg',
+                                   ['pimg' + paddify((i+2).toString(), '0', 2, 'r')]: imgDir + paddify((i+2).toString(), '0', 2, 'r') + '.jpg'};
+          i = i + 3;
+      }
+   }
+};
+
+// MOBILE NAVIGATION JS
+var toggleNavPane = function(level) {
+   var navPane = document.getElementById('mobilelist');
+   var navButton = document.getElementById('navmobile');
+   var bgImg = 'url("../images/sprites/mobile_button.png")'
+   
+   if (level === 0) {
+      bgImg = 'url("images/sprites/mobile_button.png")';
+   }
+   
+   if (!navPane) {
+      return;
+   } else if (navPane.style.display === 'block') {
+      navPane.style.display = 'none';
+      navButton.style.background = bgImg + ' 0px 0px';
+   } else {
+      navPane.style.display = 'block';
+      navButton.style.background = bgImg + ' 70px 0px';
+   }
+};
+
+// This function hides the nav menu
+var hideOnResize = function() {
+   var navPane = document.getElementById('mobilelist');
+   var bodyEle = document.body;
+   console.log(bodyEle.id);
+   if (!navPane) {
+      return;
+   } else if (navPane.style.display === 'block') {
+      if (bodyEle.id = 'bhome') {
+        toggleNavPane(0);
+      } else {
+        toggleNavPane(1);
+      }
    }
 };
 
 // This will collapse any open image on a resize.
-window.onresize = function() {contractImageView(currentId); hideBlackDiv()};
+window.onresize = function() {contractImageView(currentId); hideBlackDiv(); hideOnResize()};
 // Remove the noscript div
 window.onload = function() {onLoadActivities()};
+// Lazy load when stuff comes into view
+window.onscroll = function() {lazyLoadContent()};

@@ -673,12 +673,20 @@ nav a:hover {
   height: auto;
 }
 
-.photo_div {
+.photo_div_active {
   height: 300px;
-  width: 300px;
-  overflow: hidden;
-  padding: 0px;
   margin: 20px;
+}
+
+.photo_div_inactive {
+  height: 2px;
+  margin: 0;
+}
+
+.photo_div {
+  width: 300px;
+  padding: 0px;
+  overflow: hidden;
   display: block;
   background-color: transparent;
 }
