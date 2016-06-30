@@ -204,8 +204,6 @@ var contractImageView = function(imageId) {
    // Abort if you can't get the element
    if (!activeId) {
       return;
-   } else {
-      activeId.style = '';
    }
    
    var activeImg = activeId.children[0];
@@ -218,6 +216,9 @@ var contractImageView = function(imageId) {
    // This will make the images size properly in their standard state
    activeImg.style.maxHeight = 'none';
    activeImg.style.maxWidth = 'none';
+   activeId.style.transform = 'none';
+   activeId.style.left = '0';
+   activeId.style.top = '0';
    // Set the divs class to normal mode
    activeId.className = standardClass;
    // Reset images onclick function
@@ -327,10 +328,12 @@ var onLoadActivities = function() {
       var i = 7;
      
       for (itemId in photoLazyData) {
-          photoLazyData[itemId] = {['pimg' + paddify(i.toString(), '0', 2, 'r')]    : imgDir + paddify(i.toString(),     '0', 2, 'r') + '.jpg',
-                                   ['pimg' + paddify((i+1).toString(), '0', 2, 'r')]: imgDir + paddify((i+1).toString(), '0', 2, 'r') + '.jpg',
-                                   ['pimg' + paddify((i+2).toString(), '0', 2, 'r')]: imgDir + paddify((i+2).toString(), '0', 2, 'r') + '.jpg'};
-          i = i + 3;
+         var tempObj = {};
+         tempObj['pimg' + paddify(i.toString(), '0', 2, 'r')] = imgDir + paddify(i.toString(),     '0', 2, 'r') + '.jpg';
+         tempObj['pimg' + paddify((i+1).toString(), '0', 2, 'r')] = imgDir + paddify((i+1).toString(), '0', 2, 'r') + '.jpg';
+         tempObj['pimg' + paddify((i+2).toString(), '0', 2, 'r')] = imgDir + paddify((i+2).toString(), '0', 2, 'r') + '.jpg';
+         photoLazyData[itemId] = tempObj;
+         i = i + 3;
       }
    }
 };
