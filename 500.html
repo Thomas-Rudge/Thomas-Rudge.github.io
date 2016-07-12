@@ -21,9 +21,9 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <title>404 Error</title>
+  <title>500 Error</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="404 Error Page">
+  <meta name="description" content="500 Error Page">
   <meta name="author" content="Thomas Rudge">
   <!-- CSS & JS -->
   <link rel="stylesheet" href="css/main.css">
@@ -60,9 +60,17 @@
   <![endif]-->
 </head>
 
-<body id=bhome>
-  <div id=container>
-    <h1 class='errorpage_txt centred'>404</h1>
+<body id=b500>
+  <div id=container class=centred>
+    <h1 class='errorpage_txt no_bottom'>500</h1>
+    <p class='error_txt_small title_text margin0'>Internal Server Error</p>
+    <br>
+    <img src="images/error/500error.gif">
+    <br>
+    <p class='error_txt_small title_text margin0'>Somebody has replaced our web server with a piece of cheese.</p>
+    <br>
+    <a href='index.html' class='red_link error_txt_small'>- home -</a>
+    <br><br>
   </div>
 </body>
 </html>
