@@ -38,7 +38,7 @@
   <meta property="og:description" content="The personal resume of Thomas Edward Rudge. A Business Analyst, Operations Expert, and Software Developer, with over 8 year's experience in Business and IT Change.">
   <!-- CSS & JS -->
   <link rel="stylesheet" href="../css/main.css">
-  <script type="text/javascript" src="../javascript/mobile_navigation.js" async></script>
+  <script type="text/javascript" src="../javascript/professional.js" async></script>
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -81,6 +81,9 @@
 
 <body id=bprof>
   <div id=container>
+    <div id=noscript>
+    Please enable javascript for full page functionality.
+    </div>
     <header>
       <a href="../index.html">
         <img class=myphoto src="../images/logos/me.png" alt='My head photo'>
@@ -448,7 +451,7 @@
           </tr>
           <tr>
             <td>
-            Teacher of English & IT
+            English Teacher
             </td>
           </tr>
           <tr>
@@ -462,6 +465,8 @@
             </td>
           </tr>
         </table>
+      </div>
+      <div class=moreinfo_container id=moreinfo_cont>
       </div>
       <!-- This will only appear if the screen is wide enough -->
       <div id=full_table1 class=margin70>
@@ -489,7 +494,7 @@
             Present
             </td>
             <td>
-            Freelance <span class=small_text>(Software, Graphic Design)</span>
+            <a onclick='moreInfo(0)' class=moreinfo_link>Freelance <span class=small_text>(Software, Graphic Design)</span></a>
             </td>
             <td>
             Various
@@ -506,7 +511,7 @@
             Jul 2014
             </td>
             <td>
-            Career Break
+            <a onclick='moreInfo(1)' class=moreinfo_link>Career Break</a>
             </td>
             <td>
             n/a
@@ -523,7 +528,7 @@
             Jun 2013
             </td>
             <td>
-            Technical SME (Analyst)
+            <a onclick='moreInfo(2)' class=moreinfo_link>Technical SME (Analyst)</a>
             </td>
             <td>
             Barclays Plc
@@ -540,7 +545,7 @@
             Aug 2010
             </td>
             <td>
-            Business Analyst, <span class=small_text>Corporate Change</span>
+            <a onclick='moreInfo(3)' class=moreinfo_link>Business Analyst, <span class=small_text>Corporate Change</span></a>
             </td>
             <td>
             Barclays Plc
@@ -557,7 +562,7 @@
             Feb 2008
             </td>
             <td>
-            TLM System Administrator
+            <a onclick='moreInfo(4)' class=moreinfo_link>TLM System Administrator</a>
             </td>
             <td>
             Barclays Plc
@@ -574,7 +579,7 @@
             May 2007
             </td>
             <td>
-            Account Manager, <span class=small_text>Global Payments</span>
+            <a onclick='moreInfo(5)' class=moreinfo_link>Account Manager, <span class=small_text>Global Payments</span></a>
             </td>
             <td>
             Barclays Plc
@@ -611,7 +616,7 @@
             Jul 2015
             </td>
             <td>
-            Teacher of English & IT
+            <a onclick='moreInfo(6)' class=moreinfo_link>English Teacher</a>
             </td>
             <td>
             C.C.School
