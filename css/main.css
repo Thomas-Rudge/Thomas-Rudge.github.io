@@ -137,8 +137,18 @@
 }
 
 @media screen and (max-width: 710px) {
+  h1 {
+    color: white !important;
+  }
+  header {
+    background-color: #004f7d !important;
+  }
   footer {
     margin-left: 20px !important;
+  }
+  .black {
+    background-color: #131313 !important;
+    color: #efefef !important;
   }
   .rowcontainer {
     flex-wrap: wrap !important;
@@ -182,6 +192,30 @@
   }
   #navmobile {
     display: block !important;
+  }
+  #linkedin {
+  background: url("../images/sprites/small_icons_blue.gif") 0px -21px !important;
+  }
+  #linkedin:hover {
+    background: url("../images/sprites/small_icons_blue.gif") 20px -21px !important;
+  }
+  #facebook {
+    background: url("../images/sprites/small_icons_blue.gif") 0px -42px !important;
+  }
+  #facebook:hover {
+    background: url("../images/sprites/small_icons_blue.gif") 20px -42px !important;
+  }
+  #github {
+    background: url("../images/sprites/small_icons_blue.gif") 0px 0px !important;
+  }
+  #github:hover {
+    background: url("../images/sprites/small_icons_blue.gif") 20px 0px !important;
+  }
+  #emailme {
+    background: url("../images/sprites/small_icons_blue.gif") 0px -63px !important;
+  }
+  #emailme:hover {
+    background: url("../images/sprites/small_icons_blue.gif") 20px -63px !important;
   }
 }
 
@@ -1128,13 +1162,13 @@ nav a:hover {
 
 #navmobile {
   display: none;
-  height: 70px;
-  width: 70px;
+  height: 58px;
+  width: 58px;
   background-color: transparent;
   margin: 10px 0px 0px 30px;
   padding: 0px;
   border-radius: 10px;
-  background: url("../images/sprites/mobile_button.png") 0px 0px;
+  background: url("../images/sprites/mobile_button.png") -1px -1px;
 }
 
 #navmobile a {

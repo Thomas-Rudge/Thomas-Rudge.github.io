@@ -303,7 +303,9 @@ var onLoadActivities = function() {
       rotatePhotoBanner();
       
       var containDiv = document.getElementById('container');
+      var navButton = document.getElementById('navmobile');
       containDiv.style.boxShadow = '1px 0px 40px black';
+      navButton.style.background = 'url("../images/sprites/mobile_button_dark.png") -1px -1px';
       // This will be used to lazy load photo images
       photoLazyData = {
       'rc1': null,
@@ -344,18 +346,18 @@ var toggleNavPane = function(level) {
    var navButton = document.getElementById('navmobile');
    var bgImg = 'url("../images/sprites/mobile_button.png")'
    
-   if (level === 0) {
-      bgImg = 'url("images/sprites/mobile_button.png")';
+   if (currentPage === 'PHOTO') {
+      bgImg = 'url("../images/sprites/mobile_button_dark.png")';
    }
    
    if (!navPane) {
       return;
    } else if (navPane.style.display === 'block') {
       navPane.style.display = 'none';
-      navButton.style.background = bgImg + ' 0px 0px';
+      navButton.style.background = bgImg + ' -1px -1px';
    } else {
       navPane.style.display = 'block';
-      navButton.style.background = bgImg + ' 70px 0px';
+      navButton.style.background = bgImg + ' 59px -1px';
    }
 };
 

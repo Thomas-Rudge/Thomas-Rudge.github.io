@@ -113,10 +113,10 @@ var toggleNavPane = function(level) {
       return;
    } else if (navPane.style.display === 'block') {
       navPane.style.display = 'none';
-      navButton.style.background = bgImg + ' 0px 0px';
+      navButton.style.background = bgImg + ' -1px -1px';
    } else {
       navPane.style.display = 'block';
-      navButton.style.background = bgImg + ' 70px 0px';
+      navButton.style.background = bgImg + ' 59px -1px';
    }
 };
 
