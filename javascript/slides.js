@@ -304,8 +304,10 @@ var onLoadActivities = function() {
       
       var containDiv = document.getElementById('container');
       var navButton = document.getElementById('navmobile');
+      var topButton = document.getElementById('topbar');
       containDiv.style.boxShadow = '1px 0px 40px black';
       navButton.style.background = 'url("../images/sprites/mobile_button_dark.png") -1px -1px';
+      topButton.style.backgroundColor = '#404040';
       // This will be used to lazy load photo images
       photoLazyData = {
       'rc1': null,
@@ -374,6 +376,14 @@ var hideOnResize = function() {
       } else {
         toggleNavPane(1);
       }
+   }
+};
+
+// This scrolls the screen back to the top
+var scrollToTop = function() {
+   if (window.scrollY>0) {
+      window.scrollTo(0,window.scrollY-60);
+      setTimeout("scrollToTop()",5);
    }
 };
 

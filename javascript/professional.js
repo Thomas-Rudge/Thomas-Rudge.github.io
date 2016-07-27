@@ -136,6 +136,14 @@ var hideOnResize = function() {
    }
 };
 
+// This scrolls the screen back to the top
+var scrollToTop = function() {
+   if (window.scrollY>0) {
+      window.scrollTo(0,window.scrollY-60);
+      setTimeout("scrollToTop()",5);
+   }
+};
+
 // This function displays a pop-up window for a particular job
 var moreInfo = function(posId) {
    var infoDiv = document.getElementById('moreinfo_cont');
