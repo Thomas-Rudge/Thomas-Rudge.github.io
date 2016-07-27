@@ -8,7 +8,7 @@ var moreInfoDict = {
           <br><br>\
           Created desktop software that creates Swift MT940 cash statements from financial records for a company in Germany.\
           <br><br>\
-          Provided Business Anayst services to a Micro-Finance company for various operations and projects in Kohima.\
+          Provided Business Analyst services to a finance company for various projects in and around Nagaland.\
           <br><br>\
           Produced various designs and printed materials for a number of companies in the north east of India.\
         </p>\
@@ -44,7 +44,7 @@ var moreInfoDict = {
           Successful implementation of an automated archiving solution.\
           </li>\
           <li>\
-          Worked with Sarbanes Oxley to developed a control framework for the reconciliation of a national payment system.\
+          Worked with Sarbanes Oxley to develop a control framework for the reconciliation of a national payment system.\
           </li>\
           <li>\
           Automation and improvement of various manual process.\
