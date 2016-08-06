@@ -44,5 +44,28 @@ var scrollToTop = function() {
    }
 };
 
+// This function fades out the header when scrolling down, and makes it reappear when at the top
+var fadeHeader = function() {
+   var headerBlock = document.getElementsByTagName('header');
+   var bodyBlock = document.getElementsByTagName('body');
+   
+   if (!headerBlock || !bodyBlock) {
+      return;
+   }
+   
+   headerBlock = headerBlock[0];
+   bodyBlock = bodyBlock[0];
+   var bodyBlockPosition = bodyBlock.getBoundingClientRect();
+   
+   if (bodyBlockPosition.right >= 710) {
+      return;
+   } else if (bodyBlockPosition.top < -60) {
+      headerBlock.style.opacity = 0;
+   } else {
+      headerBlock.style.opacity = 1;
+   }
+};
+
 
 window.onresize = function() {hideOnResize()};
+window.onscroll = function() {fadeHeader()};

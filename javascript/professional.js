@@ -138,9 +138,31 @@ var hideOnResize = function() {
 
 // This scrolls the screen back to the top
 var scrollToTop = function() {
-   if (window.scrollY>0) {
-      window.scrollTo(0,window.scrollY-60);
-      setTimeout("scrollToTop()",5);
+   if (window.scrollY > 0) {
+      window.scrollTo(0, window.scrollY - 60);
+      setTimeout("scrollToTop()", 5);
+   }
+};
+
+// This function fades out the header when scrolling down, and makes it reappear when at the top
+var fadeHeader = function() {
+   var headerBlock = document.getElementsByTagName('header');
+   var bodyBlock = document.getElementsByTagName('body');
+   
+   if (!headerBlock || !bodyBlock) {
+      return;
+   }
+   
+   headerBlock = headerBlock[0];
+   bodyBlock = bodyBlock[0];
+   var bodyBlockPosition = bodyBlock.getBoundingClientRect();
+   
+   if (bodyBlockPosition.right >= 710) {
+      return;
+   } else if (bodyBlockPosition.top < -60) {
+      headerBlock.style.opacity = 0;
+   } else {
+      headerBlock.style.opacity = 1;
    }
 };
 
@@ -178,4 +200,4 @@ var hideNoscript = function() {
 
 window.onload = function() {hideNoscript()};
 window.onresize = function() {hideOnResize(), lessInfo()};
-window.onscroll = function() {lessInfo()};
+window.onscroll = function() {lessInfo(), fadeHeader()};

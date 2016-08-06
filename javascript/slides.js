@@ -13,7 +13,7 @@ document.onkeydown = function(event) {
    
    var key = event.which || event.key || event.keyCode;
    var blackDiv = document.getElementById("blackdiv");
-   console.log(key);
+   
    switch(key) {
       case 27: // Escape
       case 'Escape':
@@ -199,7 +199,6 @@ var expandImageView = function(imageId) {
 
 
 var contractImageView = function(imageId) {
-   console.log('ContractID ' + imageId);
    var activeId = document.getElementById(imageId);
    // Abort if you can't get the element
    if (!activeId) {
@@ -367,7 +366,7 @@ var toggleNavPane = function(level) {
 var hideOnResize = function() {
    var navPane = document.getElementById('mobilelist');
    var bodyEle = document.body;
-   console.log(bodyEle.id);
+   
    if (!navPane) {
       return;
    } else if (navPane.style.display === 'block') {
@@ -387,9 +386,32 @@ var scrollToTop = function() {
    }
 };
 
+// This function fades out the header when scrolling down, and makes it reappear when at the top
+var fadeHeader = function() {
+   var headerBlock = document.getElementsByTagName('header');
+   var bodyBlock = document.getElementsByTagName('body');
+   
+   if (!headerBlock || !bodyBlock) {
+      return;
+   }
+   
+   headerBlock = headerBlock[0];
+   bodyBlock = bodyBlock[0];
+   var bodyBlockPosition = bodyBlock.getBoundingClientRect();
+   
+   if (bodyBlockPosition.right >= 710) {
+      return;
+   } else if (bodyBlockPosition.top < -60) {
+      headerBlock.style.opacity = 0;
+   } else {
+      headerBlock.style.opacity = 1;
+   }
+};
+
+
 // This will collapse any open image on a resize.
 window.onresize = function() {contractImageView(currentId); hideBlackDiv(); hideOnResize()};
 // Remove the noscript div
 window.onload = function() {onLoadActivities()};
 // Lazy load when stuff comes into view
-window.onscroll = function() {lazyLoadContent()};
+window.onscroll = function() {lazyLoadContent(), fadeHeader()};

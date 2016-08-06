@@ -430,6 +430,11 @@ header {
   width: 1130px;
   background-color: white;
   top: 0;
+  -webkit-transition: opacity 0.7s;
+  -moz-transition:    opacity 0.7s;
+  -o-transition:      opacity 0.7s;
+  transition:         opacity 0.7s;
+  opacity: 1;
 }
 
 body {
@@ -649,6 +654,11 @@ nav a:hover {
   line-height: 1.3;
 }
 
+.smallest_text {
+  font-size: 10px;
+  line-height: 1.3;
+}
+
 .invert_hr {
   background: #cccccc;
   background-image: linear-gradient(to right, #333333, #cccccc, #333333);
@@ -770,6 +780,10 @@ nav a:hover {
 .moreinfo_text {
   font-size: 15px;
   padding: 20px;
+}
+
+.moreinfo_link {
+  color: #004f7d;
 }
 
 .moreinfo_link:hover {
