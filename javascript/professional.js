@@ -30,26 +30,15 @@ var moreInfoDict = {
           Responsible for the proactive optimisation of operational processes and systems. Advisor to senior management on \
           operations, technology, and change. \
           <br><br>\
-          Business technical lead in global change activities, including requirement elicitation, solution assessment, operations impact \
+          Business technical lead in global change activities, including requirement elicitation and management, solution assessment, operations impact \
           analysis, risk analysis, testing, implementation planning and execution.\
+          <br><br>\
+          Owned and managed the front end configuration of the bank’s main reconciliation system.\
+          <br><br>\
+          Generated and maintained bespoke MI using SQL for various areas in the department.\
+          <br><br>\
+          Worked with external auditors to develop a control framework for the reconciliation of a national payment system and clearing process.\
         </p>\
-        <ul>\
-          <li>\
-          5% improvement on TLM system STP automating the work of 4 full time employees.\
-          </li>\
-          <li>\
-          Successful implementation of a major upgrade to the main reconciliation system TLM.\
-          </li>\
-          <li>\
-          Successful implementation of an automated archiving solution.\
-          </li>\
-          <li>\
-          Worked with Sarbanes Oxley to develop a control framework for the reconciliation of a national payment system.\
-          </li>\
-          <li>\
-          Automation and improvement of various manual process.\
-          </li>\
-        </ul>\
       </div>',
    3:'<div class=moreinfo onclick="lessInfo()">\
         <p class="gen_text moreinfo_text margin0 justify">\
