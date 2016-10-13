@@ -9,11 +9,13 @@ $(document).ready(function() {
    $('.exp').click(function() {
       hidePopup();
       $(this).find('.moreinfo').fadeIn('fast');
+      return false;
    });
 
    // This function hides the job pop-up window when clicked
    $('.moreinfo').click(function() {
       $(this).fadeOut('fast');
+      return false;
    });
 
    // Hide any visible popups and menus on scroll or resize
