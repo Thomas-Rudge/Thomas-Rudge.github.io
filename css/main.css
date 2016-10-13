@@ -36,7 +36,7 @@
   font-weight: normal;
   font-style: normal;
 }
-  
+
 /*Responsive design bit*/
 @media screen and (max-width: 1132px) {
   footer {
@@ -53,7 +53,7 @@
   }
   .margin40 {
     margin: 15px 20px 0px 20px !important;
-  }    
+  }
   .design_image {
     max-height: 200px !important;
     max-width: 300px !important;
@@ -71,13 +71,13 @@
   }
   .design_div {
     padding: 3px !important;
-    margin: 2px !important;    
+    margin: 2px !important;
   }
   #contact_div {
     margin: 80px 0px 40px 0px !important;
   }
 }
-  
+
 @media screen and (max-width: 1000px) {
   .myname {
     font-size: 60px !important;
@@ -106,13 +106,13 @@
   }
   .design_div {
     padding: 2px !important;
-    margin: 1px !important;    
+    margin: 1px !important;
   }
   #contact_div {
     margin: 40px 0px 40px 0px !important;
   }
 }
-  
+
 @media screen and (max-width: 904px) {
   #headerdiv {
     margin-bottom: 0px !important;
@@ -311,8 +311,8 @@
 /* iPhones and iPads can't handle the layout on the software page.
 
   iPhone 4 variations*/
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .mobile_parent {
@@ -329,8 +329,8 @@
   }
 }
 /*iPhone 5 variations*/
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .mobile_parent {
@@ -347,10 +347,10 @@
   }
 }
 /*iPhone 6 variations*/
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
   .mobile_parent {
     display: table !important;
   }
@@ -365,9 +365,9 @@
   }
 }
 /* iPad Mini */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
   .mobile_parent {
     display: table !important;
@@ -383,9 +383,9 @@
   }
 }
 /* iPad 1/2 */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
   .mobile_parent {
     display: table !important;
@@ -400,9 +400,9 @@
     margin: 20px 0px 4px 10px !important;
   }
 /* iPad 3/4 */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .mobile_parent {
     display: table !important;
@@ -418,13 +418,13 @@
   }
 }
 }
-  
+
 /*Main CSS*/
 html {
   height: 100%;
   width: 100%;
 }
-  
+
 header {
   height: 169px;
   width: 1130px;
@@ -443,7 +443,7 @@ body {
   display: block;
   margin: 0px 0px 0px 0px;
 }
-  
+
 hr {
   border: 0;
   height: 1px;
@@ -454,7 +454,7 @@ hr {
 a {
   cursor: pointer;
 }
-   
+
 h1 {
   font-family: abeezeeregular, arial, sans-serif;
   text-align: center;
@@ -478,7 +478,7 @@ footer {
   color: gray;
   font-size: 12px;
 }
-  
+
 nav {
   display: block;
   margin: 5px 0px 0px 0px;
@@ -498,19 +498,19 @@ nav a {
 nav a:hover {
   cursor: pointer;
 }
-   
+
 .navli {
   display: inline-block;
   height: 39px;
   margin: 0px 1px 0px 1px;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .navli a {
   font-size: 0;
   text-decoration: none;
 }
-  
+
 .navlist {
   list-style: none;
   display: inline-block;
@@ -520,13 +520,13 @@ nav a:hover {
   border-top: solid 1px;
   border-color: #404040;
 }
- 
+
 .socialimg {
   height: 20px;
   width: 20px;
   border: 0px;
 }
-   
+
 .myname {
   font-size: 80px;
   letter-spacing: -4px;
@@ -652,12 +652,12 @@ nav a:hover {
 .title_text {
   font-size: 21px;
 }
-  
+
 .med_text {
   font-size: 17px;
   line-height: 1.3;
 }
-  
+
 .small_text {
   font-size: 14px;
   line-height: 1.3;
@@ -672,12 +672,12 @@ nav a:hover {
   background: #cccccc;
   background-image: linear-gradient(to right, #333333, #cccccc, #333333);
   }
- 
+
 .invert_text {
   color: white;
   background-color: #262626;
 }
-  
+
 .form_text {
   font-size: 15px;
   padding: 6px 2px 6px 15px;
@@ -691,18 +691,18 @@ nav a:hover {
 .inline_item {
   display: inline-block;
 }
-  
+
 .red_link {
   text-decoration: none;
   font-weight: bold;
   color: #CC0000;
 }
-  
+
 .normal_link {
   text-decoration: none;
   color: #004f7d;
 }
-  
+
 .small_link {
   font-family: questrialregular, arial, "sans-serif";
   font-size: 12px;
@@ -715,12 +715,12 @@ nav a:hover {
   box-sizing: border-box;
   background: transparent;
 }
- 
+
 .swift_block_title {
   color: #CC0000;
   font-style: bold;
 }
-   
+
 .gen_title {
   font-family: questrialregular, arial, "sans-serif";
   font-weight: bold;
@@ -735,7 +735,7 @@ nav a:hover {
 .full_width {
   width: 1130px;
 }
-  
+
 .gen_div {
   background-color: inherit;
   padding: 0px 0px 0px 0px;
@@ -841,7 +841,7 @@ nav a:hover {
   transition: 0.1s 0.5s opacity ease;
   webkit-transition: 0.1s 0.5s opacity ease;
 }
-  
+
 .design_div img {
   margin: 0px;
   padding: 8px;
@@ -852,7 +852,7 @@ nav a:hover {
   border-style: solid;
   background-color: #ebebeb;
   height: 75%;
-  width: 75%;  
+  width: 75%;
 }
 
 .design_div p {
@@ -865,7 +865,7 @@ nav a:hover {
   border-color: #004f7d;
   cursor: pointer;
 }
-  
+
 .active_design_div {
   display: block;
   padding: 0px;
@@ -896,7 +896,7 @@ nav a:hover {
   margin: 0px;
   opacity: 1;
 }
-  
+
 .arrow {
   position: fixed;
   font-family: Arial, sans-serif;
@@ -975,19 +975,19 @@ nav a:hover {
 .navlink {
   font-size: 0px;
 }
-  
+
 .margin0 {
   margin: 0px 0px 0px 0px;
 }
-  
+
 .margin70 {
   margin: 0px 60px 0px 70px;
 }
-  
+
 .margin40 {
   margin: 15px 40px 0px 40px;
 }
-  
+
 .margin30 {
   margin: 15px 30px 0px 30px;
 }
@@ -1056,17 +1056,17 @@ nav a:hover {
   margin-left: 0px;
   left: calc((100% / 2) - 350px);
   }
-  
+
 #home_symbol {
   color: #004f7d;
   }
-  
+
 #contact_div {
   display: -webkit-flex;/* For safari 8.1 */
   display: flex;
   margin: 80px 0px 40px 0px;
 }
-  
+
 #socialbar{
   list-style: none;
   color: white;
@@ -1086,7 +1086,7 @@ nav a:hover {
 #selected_page:hover {
   background-color: black;
 }
-  
+
 #small_mt_pic {
   margin: 0px 0px 0px 40px;
   padding: 0px 0px 0px 0px;
@@ -1111,23 +1111,23 @@ nav a:hover {
   box-shadow: 1px 0px 40px #262626;
   display: block;
 }
-  
+
 #headerdiv {
   display: inline-block;
   margin-top: 30px;
   margin-bottom: 50px;
 }
-  
+
 #swift_input {
   color: black;
   background-color: #FFA09B;
 }
-  
+
 #swift_output {
   color: black;
   background-color: #FFA09B;
 }
-  
+
 #swift_button {
   margin: 0px 2px 5px 30px;
 }
@@ -1178,7 +1178,7 @@ nav a:hover {
   visibility: hidden;
   z-index: 1;
 }
-  
+
 #arrow_left {
   left: 30px;
   top: 50%;
@@ -1237,7 +1237,7 @@ nav a:hover {
   font-size: 18px;
   text-decoration: none;
 }
-  
+
 /* Body background images*/
 #bhome {
   background-image: url("../images/bg/bgtile.png");
@@ -1253,17 +1253,17 @@ nav a:hover {
   background-image: url("../images/bg/softile.png");
   background-color: white;
 }
-  
+
 #bdesign {
   background-image: url("../images/bg/destile.png");
   background-color: white;
 }
-  
+
 #bphoto {
   background-image: url("../images/bg/photile.png");
-  background-color: #131313;  
+  background-color: #131313;
 }
-  
+
 #bcont {
   background-image: url("../images/bg/contile.png");
   background-color: white;

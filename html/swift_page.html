@@ -37,10 +37,8 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:description" content="Convert csv to swift MT940 or MT950 format." />
-  <!-- CSS & JS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css" />
-  <script type="text/javascript" src="../javascript/MT940_50.js" async></script>
-  <script type="text/javascript" src="../javascript/mobile_navigation.js" async></script>
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -79,7 +77,7 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
 
 <body id=bsoft>
   <div id=container>
-    <a id=topbar class='gen_text centred_txt' onclick='scrollToTop()'>
+    <a id=topbar class='gen_text centred_txt'>
     ^^^
     </a>
     <div id=noscript>
@@ -112,7 +110,7 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
         </ul>
         </nav>
         <div id=navmobile>
-        <a id=mobile_navlink onclick='toggleNavPane(1)'></a>
+
         </div>
         <div id=mobilelist>
           <ul class=gen_text>
@@ -175,9 +173,9 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
     <div class=gen_div>
       <p class='gen_text justify med_text margin0'>
         <span class='gen_title title_text'>Online MT940/950 Generator</span><br />
-        This is an online swift MT940/950 generator. The header for the csv input file can be found 
-        <a class=normal_link href='../other/input_file.txt' target='_blank'>here</a> 
-        and the field definitions can be found 
+        This is an online swift MT940/950 generator. The header for the csv input file can be found
+        <a class=normal_link href='../other/input_file.txt' target='_blank'>here</a>
+        and the field definitions can be found
         <a class=normal_link href="https://raw.githubusercontent.com/Thomas-Rudge/MT940_50_GEN/master/README.md" title="GitHub MT94050 ReadMe" target="_blank">here</a>
         . You can paste your own data into the first box, or use the default test data for a demonstration.
         <br /><br />
@@ -186,13 +184,13 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
     </div><!-- SWIFT CONSOLE-->
     <br />
     <div class=gen_div>
-      <button onclick="startSwiftScript()" id=swift_button>Convert</button>
+      <button id=swift_button>Convert</button>
       <select name=genops style="margin: 0px 2px 5px 2px;">
         <option value='Auto'>Auto</option>
         <option value='MT950'>MT950</option>
         <option value='MT940'>MT940</option>
       </select>
-      <a onclick="toggleOptions()" class=small_link id=options_button>  &#9776; more options  </a>
+      <a class=small_link id=options_button>  &#9776; more options  </a>
     </div>
     <div id=swift_options class=gen_div><!-- EXTRA OPTIONS-->
       <!-- ROW 1 -->
@@ -229,7 +227,7 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
       </p>
       <br />
       <p class='gen_text justify med_text form_text inline_item'>Direction:</p>
-      <select name=genops id=swift_direction onchange='directionOptions()'>
+      <select name=genops id=swift_direction>
         <option value='I'>I - Inward</option>
         <option value='O'>O - Outward</option>
       </select>
@@ -305,23 +303,23 @@ TEST12A,PIGGY123,ABC00070,1,2,D,M,2015-11-10,11824,2015-11-10,2015-11-10,C,33.33
     </div>
     <div>
     <p class='gen_text justify med_text margin0'>
-    I originally wrote this conversion script in Python and packaged it in a GUI for a company in Germany. However the version running on this page is 
-    written in Javascript, so the conversion takes place in your browser and not on a hidden server somewhere. You can see both versions of the script on this 
+    I originally wrote this conversion script in Python and packaged it in a GUI for a company in Germany. However the version running on this page is
+    written in Javascript, so the conversion takes place in your browser and not on a hidden server somewhere. You can see both versions of the script on this
     <a class=normal_link href="https://github.com/Thomas-Rudge/MT940_50_GEN" title="GitHub MT940/50 Generator" target="_blank">GitHub page</a>
     , or you can view the pages source files.
     <br /><br />
-    The input csv data must comply with RFC-4180 standards, with the only exception being that the generator cannot handle new-line characters 
-    within cell values (though swift doesn't allow this in reference fields anyway). You can select the output message type using the drop-down 
-    option. If left on auto the script will only produce an MT940 if it finds at least one record with a field 86 (Ref 4) populated. The advanced 
-    options give you more control over the output. By default the program expects dates in the input data to be in ISO8601 format (YYYYMMDD), and 
-    the desired output to be basic normal priority inward (to swift) messages. No validation is performed on either the input, or output, and final 
+    The input csv data must comply with RFC-4180 standards, with the only exception being that the generator cannot handle new-line characters
+    within cell values (though swift doesn't allow this in reference fields anyway). You can select the output message type using the drop-down
+    option. If left on auto the script will only produce an MT940 if it finds at least one record with a field 86 (Ref 4) populated. The advanced
+    options give you more control over the output. By default the program expects dates in the input data to be in ISO8601 format (YYYYMMDD), and
+    the desired output to be basic normal priority inward (to swift) messages. No validation is performed on either the input, or output, and final
     responsibility for ensuring the outputs completeness and compatibility lies with you.
     </p>
     <p class='gen_text justify small_text margin0'>
-    You can read more about the swift message block structure, including headers, in 
+    You can read more about the swift message block structure, including headers, in
     <a class=normal_link href="http://www.ibm.com/support/knowledgecenter/SSBTEG_4.3.0/com.ibm.wbia_adapters.doc/doc/swift/swift72.htm%23HDRI1023624" target="_blank">IBM's knowledge center</a>
-    and on <a class=normal_link href="http://www.sepaforcorporates.com/swift-for-corporates/read-swift-message-structure/" target="_blank">Sepa's corporate website.</a> 
-    You can read more about MT940 and MT950 messages in <a class=normal_link href="https://www2.swift.com/uhbonline/books/public/en_uk/us9m_20150724/index.htm" target="_blank">Swift's User Handbook.</a> 
+    and on <a class=normal_link href="http://www.sepaforcorporates.com/swift-for-corporates/read-swift-message-structure/" target="_blank">Sepa's corporate website.</a>
+    You can read more about MT940 and MT950 messages in <a class=normal_link href="https://www2.swift.com/uhbonline/books/public/en_uk/us9m_20150724/index.htm" target="_blank">Swift's User Handbook.</a>
     It's all riveting stuff.
     </p>
     </div>
@@ -332,5 +330,7 @@ TEST12A,PIGGY123,ABC00070,1,2,D,M,2015-11-10,11824,2015-11-10,2015-11-10,C,33.33
     Site not working properly? &#128534; <a class=normal_link href="mailto:hello@thomasrudge.co.uk?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
     </footer>
   </div>
+<script type="text/javascript" src="../javascript/MT940_50.js"></script>
+<script type="text/javascript" src="../javascript/mobile_navigation.js"></script>
 </body>
 </html>
