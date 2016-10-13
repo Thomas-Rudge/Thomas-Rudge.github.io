@@ -38,6 +38,7 @@
   <meta property="og:description" content="Software projects by Thomas Edward Rudge." />
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/sketch.css" />
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -181,7 +182,7 @@
         Below are some of the main software projects I have been working on over the years.
       </p>
     </div>
-    <hr />
+    <hr/>
     <div class='gen_div margin40 mobile_parent' id=nepos>
       <a href="http://neposservice.wix.com/nepos" title="Nepos Software" target="_blank" >
         <img class='genphoto mobile_child img150' src="../images/logos/nepos_logo.png" alt="NEPOS" />
@@ -202,7 +203,7 @@
       <a class=normal_link href="http://neposservice.wix.com/nepos" title="Nepos Software" target="_blank">Nepos website</a>.
       </p>
     </div>
-    <hr />
+    <hr/>
     <div class='gen_div margin40 mobile_parent'>
       <a href="swift_page.html" title="MT940/50 Generator">
         <img class='genphoto mobile_child img150' src="../images/logos/mt_logo.png" alt="MT Logo" />
@@ -216,18 +217,56 @@
       I also created a version with a graphical user interface for a company in Germany that you can download <a class=normal_link href="" target="_blank">here</a>.
       </p>
     </div>
-    <hr />
+    <hr/>
+    <div class='gen_div margin40 mobile_parent'>
+      <div class=inline_item>
+        <p class='gen_text justify med_text mobile_child'>
+        I created this drawing tool as part of an Odin Project assignment. It was created using jQuery. You can see the tool's individual repo
+        on GitHub <a href="https://github.com/Thomas-Rudge/web-a-sketch" title="web-a-sketch">here.</a>
+        </p>
+        <div id=sketch_wrapper>
+          <div id=controls>
+            <form id=websketch>
+              <p>Resolution</p>
+              <input type="number" name=gridsize value="32">
+              <br/>
+              <p>Draw on</p>
+              <select name=draw>
+                <option value=0>hover</option>
+                <option value=1>click</option>
+              </select>
+              <br/>
+              <p>Style</p>
+              <select name=style>
+                <option value=0>Normal</option>
+                <option value=1>Inverted</option>
+                <option value=2>Random</option>
+                <option value=3>Gradient</option>
+              </select>
+              <button>  GO  </button>
+            </form>
+          </div>
+          <div id=grid_container></div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <hr/>
     <div class='gen_div fullwidth'>
       <p class='gen_text centred med_text'>
       <img src='../favicon/favicon-16x16.png' alt='Small logo' /> This website has its own <a class=normal_link href="https://github.com/Thomas-Rudge/personal-website" target="_blank">GitHub repo</a>, check it out.
       </p>
     </div>
-    <hr />
+    <hr/>
     <footer class=relative_footer>
     &#169; Copyright 2016 Thomas Edward Rudge. All rights reserved. All materials presented on this website are protected by international copyright law.<br /><br />
     Site not working properly? &#128534; <a class=normal_link href="mailto:hello@thomasrudge.co.uk?Subject=Something%20is%20wrong%20with%20your%20site!">Please let me know.</a>
     </footer>
   </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="../javascript/sketch.js"></script>
 <script type="text/javascript" src="../javascript/mobile_navigation.js"></script>
+<script type="text/javascript" src="../javascript/sketch.js"></script>
 </body>
 </html>
