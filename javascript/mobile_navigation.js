@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
          bgImg = 'url("../images/sprites/mobile_button.png")';
       }
+      console.log(bgImg);
       // If navigation menu is visible, hide it, else show it
       if (navPane.style.display === 'block') {
          navPane.style.display = 'none';
