@@ -176,7 +176,7 @@ MTMTMTMTMTMTMTMTMTMTMTMTMTMTMT
         This is an online swift MT940/950 generator. The header for the csv input file can be found
         <a class=normal_link href='../other/input_file.txt' target='_blank'>here</a>
         and the field definitions can be found
-        <a class=normal_link href="https://raw.githubusercontent.com/Thomas-Rudge/MT940_50_GEN/master/README.md" title="GitHub MT94050 ReadMe" target="_blank">here</a>
+        <a class=normal_link href="https://raw.githubusercontent.com/Thomas-Rudge/MT940_50_GEN_PY/master/README.md" title="GitHub MT94050 ReadMe" target="_blank">here</a>
         . You can paste your own data into the first box, or use the default test data for a demonstration.
         <br /><br />
         For more info see the bottom of the page.
@@ -304,9 +304,11 @@ TEST12A,PIGGY123,ABC00070,1,2,D,M,2015-11-10,11824,2015-11-10,2015-11-10,C,33.33
     <div>
     <p class='gen_text justify med_text margin0'>
     I originally wrote this conversion script in Python and packaged it in a GUI for a company in Germany. However the version running on this page is
-    written in Javascript, so the conversion takes place in your browser and not on a hidden server somewhere. You can see both versions of the script on this
-    <a class=normal_link href="https://github.com/Thomas-Rudge/MT940_50_GEN" title="GitHub MT940/50 Generator" target="_blank">GitHub page</a>
-    , or you can view the pages source files.
+    written in Javascript, so the conversion takes place in your browser and not on a hidden server somewhere. You can see both versions of the script on this GitHub 
+    <a class=normal_link href="https://github.com/Thomas-Rudge/MT940_50_GEN_PY" title="GitHub MT940/50 Generator Python" target="_blank">page</a>
+    , and a Ruby version 
+    <a class=normal_link href="https://github.com/Thomas-Rudge/MT940_50_GEN_RB" title="GitHub MT940/50 Generator Ruby" target="_blank">here</a>
+    . Alternatively you can view this pages source files.
     <br /><br />
     The input csv data must comply with RFC-4180 standards, with the only exception being that the generator cannot handle new-line characters
     within cell values (though swift doesn't allow this in reference fields anyway). You can select the output message type using the drop-down
