@@ -1,8 +1,9 @@
 #Notepad++ session file
 npad_wbsite
 
-# Photoshop files
+# Photoshop and Krita files
 *.psd
+*.kra
 
 # Windows image file caches
 Thumbs.db

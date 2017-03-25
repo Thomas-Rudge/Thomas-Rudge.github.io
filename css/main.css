@@ -603,8 +603,8 @@ nav a:hover {
 }
 
 .standard_table tr {
-	display: table-row;
-	cursor: pointer;
+  display: table-row;
+  cursor: pointer;
 }
 
 .exp:hover {
@@ -1000,6 +1000,10 @@ nav a:hover {
   color: #004f7d;
 }
 
+.default_cursor tr {
+  cursor: default;
+}
+
 #empty {
   /*Don't put anything here*/
 }
@@ -1275,6 +1279,93 @@ nav a:hover {
 }
 
 /* Sprites */
+.skill {
+  display: inline-block;
+  border: none;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+#skill_ruby {
+  background: url("../images/sprites/skills.png") -60px 30px;
+}
+
+#skill_rails {
+  background: url("../images/sprites/skills.png") -150px 30px;
+}
+
+#skill_rspec {
+  background: url("../images/sprites/skills.png") -90px 30px;
+}
+
+#skill_python {
+  background: url("../images/sprites/skills.png") -180px 30px;
+}
+
+#skill_js {
+  background: url("../images/sprites/skills.png") 30px 0px;
+}
+
+#skill_jquery {
+  background: url("../images/sprites/skills.png") -30px 0px;
+}
+
+#skill_ajax {
+  background: url("../images/sprites/skills.png") -150px 0px;
+}
+
+#skill_html {
+  background: url("../images/sprites/skills.png") -60px 0px;
+}
+
+#skill_css {
+  background: url("../images/sprites/skills.png") 0px 0px;
+}
+
+#skill_sass {
+  background: url("../images/sprites/skills.png") 60px 0px;
+}
+
+#skill_sql {
+  background: url("../images/sprites/skills.png") -30px 30px;
+}
+
+#skill_tlm {
+  background: url("../images/sprites/skills.png") 0px -30px;
+}
+
+#skill_excel {
+  background: url("../images/sprites/skills.png") -90px 0px;
+}
+
+#skill_access {
+  background: url("../images/sprites/skills.png") -180px 0px;
+}
+
+#skill_opt {
+  background: url("../images/sprites/skills.png") 60px 30px;
+}
+
+#skill_uat {
+  background: url("../images/sprites/skills.png") 90px 0px;
+}
+
+#skill_prob {
+  background: url("../images/sprites/skills.png") 90px 30px;
+}
+
+#skill_risk {
+  background: url("../images/sprites/skills.png") -120px 30px;
+}
+
+#skill_ops {
+  background: url("../images/sprites/skills.png") -120px 0px;
+}
+
+#skill_git {
+  background: url("../images/sprites/skills.png") 30px 30px;
+}
+
 #linkedin, #facebook, #github, #emailme, #linkedin_dark, #facebook_dark, #github_dark, #emailme_dark {
   width: 20px;
   height: 20px;
