@@ -1004,6 +1004,11 @@ nav a:hover {
   cursor: default;
 }
 
+.soft_image {
+  padding: 15px 0;
+  margin: 15px 0;
+}
+
 #empty {
   /*Don't put anything here*/
 }
