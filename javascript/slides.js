@@ -16,6 +16,9 @@ document.onkeydown = function(event) {
    switch(key) {
       case 27: // Escape
       case 'Escape':
+         if (blackDiv.style.display === 'none') {
+            return;
+         }
          contractImageView(null, currentId, false)
          break;
 
