@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
    swiftButton.addEventListener('click', function() {
       // Cover my arse
       var legal = confirm('I (the author of this program) make no guarantees and accept no responsibility ' +
-                          'no responsibility for any damages or loss (physical, material, financial, or ' +
+                          'for any damages or loss (physical, material, financial, or ' +
                           'otherwise), corruption of or loss of data, caused by the use of this program or ' +
                           'its outputs. You use the output of this program at your own risk.')
       if (!legal) {
